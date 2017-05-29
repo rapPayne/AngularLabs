@@ -1,5 +1,5 @@
 {
-  "name": "angular2labs",
+  "name": "angularlabs",
   "version": "0.0.1",
   "author": "Rap Payne",
   "description": "Labs for the Angular course",
@@ -13,6 +13,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "mongodb": "^2.2.27",
     "mongoose": "^4.7.4",

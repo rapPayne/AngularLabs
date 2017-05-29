@@ -9,17 +9,22 @@ if ! (npm --version >/dev/null 2>&1) ; then
   exit 2
 fi
 
-# Create the Northwind Database
-./loadMongoCSVFiles.bash
+# Create the wms Database
+./loadDatabase.bash
 if (( $? != 0 )) ; then
   exit 3
 fi
 
+# Update the order dates
+node ./setOrderDates.js
+
 # Run npm install for the webserver
+echo 'Installing all libraries for the web server. This may take a little while.'
 cd ../
 npm install
 
 # Run npm install for the app
+echo 'Installing all libraries for the web app. This may take a *long* while.'
 cd warehouse
 npm install
 

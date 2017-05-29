@@ -3,15 +3,9 @@ var Schema = mongoose.Schema;
 
 var productModel = new Schema({
   "productID" : {type: Number},
-  "productName" : {type: String},
-  "supplierID" : {type: Number},
-  "categoryID" : {type: Number},
-  "quantityPerUnit" : {type: String},
-  "unitPrice" : {type: Number},
-  "unitsInStock" : {type: Number, default: 0},
-  "unitsOnOrder" : {type: Number, default: 0},
-  "reorderLevel" : {type: Number},
-  "discontinued" : {type: Boolean, default: false },
+  "name" : {type: String},
+  "description" : {type: String},
+  "price" : {type: Number},
   "featured" : {type: Boolean, default: false}
 });
 

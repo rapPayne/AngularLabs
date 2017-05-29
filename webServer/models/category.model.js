@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var categoryModel = new Schema({
   "categoryID" : {type: Number},
-  "categoryName" : {type: String},
+  "name" : {type: String},
   "description" : {type: String},
 });
 

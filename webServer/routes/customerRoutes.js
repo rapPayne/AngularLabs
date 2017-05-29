@@ -4,7 +4,7 @@ var routes = function (customer) {
   var apiRouter = express.Router();
   apiRouter.route('/')
     .get(function (req, res) {
-      customer.find(function(err, customers){
+      customer.find(function (err, customers) {
         if (err)
           res.status(500).send(err);
         else
@@ -19,10 +19,10 @@ var routes = function (customer) {
     });
 
   // Middleware insertion - intercept the request and do the find.
-  //TODO: Authorize the user ... make sure his userID can read this customerID
+  //TODO: Authorize the user ... make sure his email can read this customerID
   apiRouter.use('/:customerID', function (req, res, next) {
     var customerID = req.params.customerID;
-    customer.findOne({"customerID":customerID}, function(err, customer){
+    customer.findOne({ "customerID": customerID }, function (err, customer) {
       if (err)
         res.status(500).send(err);
       else if (customer) {
@@ -55,9 +55,9 @@ var routes = function (customer) {
       if (req.body._id)
         delete req.body._id;
       for (var key in req.body) {
-       if (key in req.customer) {
-         req.customer[key] = req.body[key];
-       }
+        if (key in req.customer) {
+          req.customer[key] = req.body[key];
+        }
       }
       req.customer.save(function (err) {
         if (err)
@@ -78,4 +78,3 @@ var routes = function (customer) {
 
 };
 module.exports = routes;
-
