@@ -4,17 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ReceiveProductComponent } from './receiving/receive-product.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { ShipOrderComponent } from './shipping/ship-order.component';
+
+import { OrderService } from './shared/order.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReceiveProductComponent,
+    InventoryComponent,
+    ShipOrderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

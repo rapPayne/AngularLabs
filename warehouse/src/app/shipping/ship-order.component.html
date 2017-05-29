@@ -1,0 +1,54 @@
+<section id="readyButtonSection" *ngIf="!order">
+  <div class="alert alert-info">
+    1. When you're ready to pick, pack, and ship an order click the button below.'
+  </div>
+  <button (click)="getOrderToShip()" class="btn btn-primary">Give me an order to ship</button>
+</section>
+<section id="pickingSection" *ngIf="order">
+  <h3>
+    Order number {{ order.orderID }}
+  </h3>
+  <div class="alert alert-info">
+    2. Here are the products in order {{ order.orderID }}. Go to each product's location and pick the quantity specified.
+    </div>
+  <section>
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Qty</th>
+          <th>Product</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of order.lines">
+          <td>{{ line.quantity }}</td>
+          <td><img [src]="'/assets/images/productImages/' + line.product.productID + '.jpg'" alt="" class="img-responsive table-image"
+            />{{ line.product.productName }}</td>
+          <td>{{ line.productLocation }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="alert alert-info">
+    3. Pack the products in a box, seal it, and attach the address label below to it.
+    </div>
+  <section>
+    <h3>Shipping label</h3>
+    <pre>
+    {{ order.shipToName }}
+    {{ order.shipToAddress }}
+    {{ order.shipToCity }} {{ order.shipToRegion }} {{ order.shipToPostalCode}}
+    </pre>
+  </section>
+  <div class="alert alert-info">
+    4. After the package is registered with the shipping company, enter their shipping confirmation number below.
+  </div>
+  <form (ngSubmit)="shipTheOrder()">
+    <div class="form-group">
+      <label for="shippingNumber">Shipper Number</label>
+      <input id="shippingNumber" required class="form-control" />
+    </div>
+    <input type="submit" value="Save" />
+  </form>
+</section>
