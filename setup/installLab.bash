@@ -27,6 +27,10 @@ npm install
 echo 'Installing all libraries for the web app. This may take a *long* while.'
 cd warehouse
 npm install
+if (( $? != 0 )) ; then
+  echo "The web app libraries install failed. Not a big deal. Just try it again manually by going 'npm install'"
+  exit 4
+fi
 
 echo ""
 echo "Installation was successful."
