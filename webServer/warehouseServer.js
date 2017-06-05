@@ -65,18 +65,18 @@ db.once('open', function () {
   });
 */
   // Models
-  var categoryModel = require('./webServer/models/category.model.js');
-  var customerModel = require('./webServer/models/customer.model.js');
-  var locationModel = require('./webServer/models/location.model.js');
-  var orderModel = require('./webServer/models/order.model.js');
-  var productModel = require('./webServer/models/product.model.js');
+  var categoryModel = require('./models/category.model.js');
+  var customerModel = require('./models/customer.model.js');
+  var locationModel = require('./models/location.model.js');
+  var orderModel = require('./models/order.model.js');
+  var productModel = require('./models/product.model.js');
 
   // API Routes (For Ajax requests)
-  var categoryRouter = require('./webserver/Routes/categoryRoutes.js')(categoryModel);
-  var customerRouter = require('./webserver/Routes/customerRoutes.js')(customerModel);
-  var locationRouter = require('./webserver/Routes/locationRoutes.js')(locationModel);
-  var orderRouter = require('./webserver/Routes/orderRoutes.js')(orderModel);
-  var productRouter = require('./webserver/Routes/productRoutes.js')(productModel);
+  var categoryRouter = require('./routes/categoryRoutes.js')(categoryModel);
+  var customerRouter = require('./routes/customerRoutes.js')(customerModel);
+  var locationRouter = require('./routes/locationRoutes.js')(locationModel);
+  var orderRouter = require('./routes/orderRoutes.js')(orderModel);
+  var productRouter = require('./routes/productRoutes.js')(productModel);
   app.use('/api/categories', categoryRouter);
   app.use('/api/customers', customerRouter);
   app.use('/api/locations', locationRouter);
