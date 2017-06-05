@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(morgan('dev')); // Should be logging to the console
 
-mongoose.connect('mongodb://localhost/northwind');
+mongoose.connect('mongodb://localhost/wms');
 var db = mongoose.connection;
 mongoose.Promise = global.Promise;
 
@@ -65,22 +65,26 @@ db.once('open', function () {
   });
 */
   // Models
+  var categoryModel = require('./webServer/models/category.model.js');
   var customerModel = require('./webServer/models/customer.model.js');
-  var inventoryModel = require('./webServer/models/inventory.model.js');
+  var locationModel = require('./webServer/models/location.model.js');
   var orderModel = require('./webServer/models/order.model.js');
+  var productModel = require('./webServer/models/product.model.js');
 
   // API Routes (For Ajax requests)
+  var categoryRouter = require('./webserver/Routes/categoryRoutes.js')(categoryModel);
   var customerRouter = require('./webserver/Routes/customerRoutes.js')(customerModel);
-  var inventoryRouter = require('./webserver/Routes/inventoryRoutes.js')(inventoryModel);
+  var locationRouter = require('./webserver/Routes/locationRoutes.js')(locationModel);
   var orderRouter = require('./webserver/Routes/orderRoutes.js')(orderModel);
-  app.use('/api/customer', customerRouter);
-  app.use('/api/inventory', inventoryRouter);
-  app.use('/api/order', orderRouter);
+  var productRouter = require('./webserver/Routes/productRoutes.js')(productModel);
+  app.use('/api/categories', categoryRouter);
+  app.use('/api/customers', customerRouter);
+  app.use('/api/locations', locationRouter);
+  app.use('/api/orders', orderRouter);
+  app.use('/api/products', productRouter);
 
   // all other routes are handled by Angular
   app.use(express.static(__dirname + "/warehouse/dist/"));
-
-
 
   app.listen(app.get('port'), function () {
     console.log('Warehouse Server listening. Point your browser at http://localhost:' + app.get('port'));

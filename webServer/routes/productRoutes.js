@@ -15,7 +15,7 @@ var routes = function (product) {
     .get(function (req, res) {
       var search = req.query.search;
       var regex = new RegExp(search, "i");
-      product.find({"productName" : regex}, function(err, products){
+      product.find({"name" : regex}, function(err, products){
         if (err)
           res.status(500).send(err);
         else

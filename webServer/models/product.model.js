@@ -7,6 +7,6 @@ var productModel = new Schema({
   "description" : {type: String},
   "price" : {type: Number},
   "featured" : {type: Boolean, default: false}
-});
+}, {collection: 'products'});
 
 module.exports=mongoose.model('product', productModel);
