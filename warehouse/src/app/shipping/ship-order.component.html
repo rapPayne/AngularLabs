@@ -1,3 +1,75 @@
-<p>
-  ship-order works!
-</p>
+<h2>Ship an Order</h2> 
+
+<div class="alert">{{ order.status }} Order status {{ orderStatusText }}</div>
+<div class="alert alert-info">
+  <h3>Instructions</h3>
+  <ol>
+    <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
+    <li>Pick the items and check the <i>Got it</i> box.</li>
+    <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+  </ol>
+  <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+</div>
+<section id="orderInfo">
+  <ul class="list-group">
+    <li class="list-group-item">
+      Order number: {{ order.orderID }}
+    </li>
+    <li class="list-group-item">
+      Order date: {{ order.orderDate }}
+    </li>
+    <li class="list-group-item">
+      Ship via: {{ order.shipVia }}
+    </li>
+  </ul>
+</section>
+<section id="orderLines">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Got it!</th>
+        <th>Location</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of order.lines">
+        <td><input type='checkbox' class="big-checkbox" /></td>
+        <td *ngIf="line.locationID; else getLocation">{{ line.locationID }} ({{ line.locationID | locationExpand  }})</td>
+        <td>{{ line.productID }}</td>
+        <td><img src="/assets/images/productImages/{{ line.productID }}.jpg" /></td>
+        <td>{{ line.product.name }}</td>
+        <td>{{ line.quantity }}</td>
+        <ng-template #getLocation>
+          <button (click)="GetBestLocation(line)" class="btn">Get best location</button>
+        </ng-template>
+      </tr>
+      <!--    
+      <tr>
+        <td><input type='checkbox' class="big-checkbox" /></td>
+        <td>12D1C</td>
+        <td>45</td>
+        <td>Gummy Bears</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><input type='checkbox' class="big-checkbox" /></td>
+        <td>03B3A</td>
+        <td>82</td>
+        <td>Sargento Sardines</td>
+        <td>21</td>
+      </tr>
+      -->
+    </tbody>
+  </table>
+</section>
+<section id="markAsShipped">
+  <button [disabled]="true" (click)="MarkAsShipped(order)" class="btn btn-lg btn-primary">Mark as shipped</button>
+  <button (click)="MarkWithProblem(order)" class="btn btn-lg btn-danger">Problem</button>
+</section>
+<section id="shippingLabel">
+  {{ order.shipName }} {{ order.shipAddress }} {{ order.shipCity }}, {{ order.shipRegion }} {{ order.shipPostalCode }} {{ order.shipCountry
+  }}
+</section>

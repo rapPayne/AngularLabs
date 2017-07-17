@@ -7,6 +7,10 @@ import { AppComponent } from './app.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReceiveProductComponent } from './receiving/receive-product.component';
 import { ShipOrderComponent } from './shipping/ship-order.component';
+import { routing } from './app.router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LocationExpandPipe } from './location-expand.pipe';
+import { ListOfOrdersComponent } from './shipping/list-of-orders.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +18,15 @@ import { ShipOrderComponent } from './shipping/ship-order.component';
     InventoryComponent,
     ReceiveProductComponent,
     ShipOrderComponent,
+    DashboardComponent,
+    LocationExpandPipe,
+    ListOfOrdersComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

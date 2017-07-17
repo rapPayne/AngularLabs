@@ -7,65 +7,18 @@
       </div>
       <div class="collapse navbar-collapse" id="header-menu">
         <ul class="nav navbar-nav">
-          <li><a href="#">Ship Orders</a></li>
-          <li><a href="#">Receive Product</a></li>
-          <li><a href="#">Take Inventory</a></li>
+          <li><a [routerLink]="['/ship']">Ship Orders</a></li>
+          <li><a [routerLink]="['/receive']">Receive Product</a></li>
+          <li><a [routerLink]="['/inventory']">Take Inventory</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <section class="well">
+    <img src="/assets/images/ChefHatLogo.png" alt="Northwind Traders" />
     <h1>{{title}}</h1>
   </section>
 </header>
 <main>
-  <section class="panel panel-primary">
-    <div class="panel-heading">
-      Orders ready to be picked
-    </div>
-    <div class="panel-body">
-      <p class="alert alert-danger">
-        Our customers are our top priority! Please make sure these orders are picked, packed, and shipped as soon as possible.
-      </p>
-      <p class="alert alert-info">
-        All orders have been taken care of.
-      </p>
-    </div>
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th>Order</th>
-          <th>Date</th>
-          <th>Products</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>12345</td>
-          <td>Monday, April 1, 2099</td>
-          <td>5</td>
-          <td>$1,029.54</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td colspan='3'>
-            Janie Customer, 123 Sample Lane, Anytown, ST, 00000
-          </td>
-        </tr>
-        <tr>
-          <td>12346</td>
-          <td>Monday, April 2, 2099</td>
-          <td>3</td>
-          <td>$329.54</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td colspan='3'>
-            Joe Customer, 5594 Example Road, Anytown, ST, 00000
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  <router-outlet></router-outlet>
 </main>
