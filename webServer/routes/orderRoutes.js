@@ -3,9 +3,9 @@ var express = require('express');
 var routes = function (orderModel) {
   var apiRouter = express.Router();
 
-  apiRouter.get('/nextToShip', function (req, res) {
-    orderModel.find({ "customerID": "1009" }, function (err, orders) {
-      console.log("Getting next order");
+  apiRouter.get('/readyToShip', function (req, res) {
+    orderModel.find({ "status": 0 }, function (err, orders) {
+      console.log("Getting orders that are ready to ship");
       res.json(orders);
       //res.status(404).send("All orders have shipped. Nothing to pick.");
     })

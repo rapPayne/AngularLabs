@@ -6,6 +6,7 @@ var path = require('path');
 var app = express();
 app.set('port', (process.env.PORT || 3000));
 
+
 //app.use('/', express.static(__dirname + '/../../dist'));
 
 app.use(bodyParser.json());
@@ -22,48 +23,7 @@ db.once('open', function () {
   console.log('Connected to MongoDB');
 
   // APIs
-  /*
-  // select all
-  app.get('/customers', function (req, res) {
-    customers.find({}, function (err, docs) {
-      if (err) return console.error(err);
-      res.json(docs);
-    });
-  });
 
-  // create
-  app.post('/customers', function (req, res) {
-    var obj = new Cat(req.body);
-    obj.save(function (err, obj) {
-      if (err) return console.error(err);
-      res.status(200).json(obj);
-    });
-  });
-
-  // find by id
-  app.get('/customers/:customerID', function (req, res) {
-    Cat.findOne({ customerID: req.params.customerID }, function (err, obj) {
-      if (err) return console.error(err);
-      res.json(obj);
-    })
-  });
-
-  // update by id
-  app.put('/customers/:customerID', function (req, res) {
-    Cat.findOneAndUpdate({ customerID: req.params.customerID }, req.body, function (err) {
-      if (err) return console.error(err);
-      res.sendStatus(200);
-    })
-  });
-
-  // delete by id
-  app.delete('/customers/:customerID', function (req, res) {
-    Cat.findOneAndRemove({ customerID: req.params.customerID }, function (err) {
-      if (err) return console.error(err);
-      res.sendStatus(200);
-    });
-  });
-*/
   // Models
   var categoryModel = require('./models/category.model.js');
   var customerModel = require('./models/customer.model.js');
@@ -83,8 +43,11 @@ db.once('open', function () {
   app.use('/api/orders', orderRouter);
   app.use('/api/products', productRouter);
 
+  // static routes
+  app.use('/assets', express.static(path.join(__dirname, "/../warehouse/src/assets/")));
+
   // all other routes are handled by Angular
-  app.use(express.static(__dirname + "/warehouse/dist/"));
+  app.use(express.static(__dirname + "../warehouse/src"));
 
   app.listen(app.get('port'), function () {
     console.log('Warehouse Server listening. Point your browser at http://localhost:' + app.get('port'));
