@@ -1,0 +1,14 @@
+{
+  "name": "setup",
+  "version": "1.0.0",
+  "description": "For the setup and initialization of the Northwind WMS",
+  "main": "makeData.js",
+  "scripts": {
+    "setup": "node makeData & node setOrderDates"
+  },
+  "author": "Rap Payne",
+  "license": "ISC",
+  "devDependencies": {
+    "mongodb": "^2.2.28"
+  }
+}

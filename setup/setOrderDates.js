@@ -1,5 +1,5 @@
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+const MongoClient = require('../webServer/node_modules/mongodb').MongoClient;
+//const assert = require('../webServer/node_modules/assert');
 
 const urlWms = 'mongodb://127.0.0.1:27017/wms';
 let wmsDb;
