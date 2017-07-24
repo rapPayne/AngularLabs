@@ -11,6 +11,45 @@ var routes = function (orderModel) {
     })
   });
 
+// Order statuses: 0=ready to ship. 1=shipped. 2=problem with order
+  apiRouter.patch('/:orderID/markAsShipped', function (req, res) {
+    const orderID = req.params.orderID;
+    orderModel.findOne({ "orderID": orderID }, function (err, order) {
+      if (!order)
+        res.status(404).send();
+      else if (err)
+        res.status(500).send(err);
+      else {
+        order["status"] = 1; // 1 = shipped order
+        order.save(function (err) {
+          if (err)
+            res.status(500).send(err);
+          else
+            res.status(204).send();
+        });
+      }
+    });
+  });
+
+  apiRouter.patch('/:orderID/markAsProblem', function (req, res) {
+    const orderID = req.params.orderID;
+    orderModel.findOne({ "orderID": orderID }, function (err, order) {
+      if (!order)
+        res.status(404).send();
+      else if (err)
+        res.status(500).send(err);
+      else {
+        order["status"] = 2; // 2 = problem order
+        order.save(function (err) {
+          if (err)
+            res.status(500).send(err);
+          else
+            res.status(204).send();
+        });
+      }
+    });
+  });
+
   apiRouter.route('/')
     .get(function (req, res) {
       orderModel.find(function (err, orders) {
