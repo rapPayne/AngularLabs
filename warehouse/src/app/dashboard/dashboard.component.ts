@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 })
 export class DashboardComponent {
 
-  numberOfOrders = 3;
+  //numberOfOrders = 3;
   orders:Order[] = new Array<Order>();
 
   constructor (private _http:Http) {
@@ -24,8 +24,6 @@ export class DashboardComponent {
     .toPromise()
     .then((res) => {
       this.orders = res.json();
-      console.log('got em', this.orders);
-      
     });
   }
 

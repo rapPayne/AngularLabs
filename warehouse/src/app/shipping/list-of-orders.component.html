@@ -1,31 +1,21 @@
-<table class="table table-striped table-hover">
-  <thead>
-    <tr>
-      <th>Order</th>
-      <th>Date</th>
-      <th>Products</th>
-      <th>Destination</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let order of orders">
-      <td>{{ order.orderID }}</td>
-      <td>{{ order.orderDate | date }}</td>
-      <td>{{ order.lines.length }}</td>
-      <td>{{ order.shipCity }}, {{ order.shipRegion }} {{ order.shipCountry }}</td>
-    </tr>
-    <!-- <tr>
-          <td>12345</td>
-          <td>Monday, April 1, 2099</td>
-          <td>5</td>
-          <td>Biloxi, MS 39534</td>
-        </tr>
-        <tr>
-          <td>12346</td>
-          <td>Monday, April 2, 2099</td>
-          <td>3</td>
-          <td>Ft. Lauderdale, FL 23998</td>
-        </tr>
-        <tr> -->
-  </tbody>
-</table>
+<div class="order-list container">
+  <div class="header-row row">
+    <div class="col-xs-3">Order</div>
+    <div class="col-xs-4">Date</div>
+    <div class="col-xs-2">Products</div>
+    <div class="col-xs-3">Destination</div>
+  </div>
+
+  <div *ngFor="let order of orders" [routerLink]="['/ship',order.orderID]" class="container order-row">
+    <div class="row row-1">
+      <div class="col-xs-3">{{ order.orderID }}</div>
+      <div class="col-xs-4">{{ order.orderDate }}</div>
+      <div class="col-xs-2">{{ order.lines.length }}</div>
+      <div class="col-xs-3">{{ order.orderTotal }}</div>
+    </div>
+    <div class="row row-2">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-9">{{ order.shipAddress }}, {{ order.shipCity }}, {{ order.shipRegion }}, {{ order.shipCity }}, {{ order.shipCountry }}</div>
+    </div>
+  </div>
+</div>

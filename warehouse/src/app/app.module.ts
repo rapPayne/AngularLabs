@@ -11,6 +11,7 @@ import { routing } from './app.router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LocationExpandPipe } from './location-expand.pipe';
 import { ListOfOrdersComponent } from './shipping/list-of-orders.component';
+import { OrdersToShipComponent } from './shipping/orders-to-ship.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ListOfOrdersComponent } from './shipping/list-of-orders.component';
     DashboardComponent,
     LocationExpandPipe,
     ListOfOrdersComponent,
+    OrdersToShipComponent,
   ],
   imports: [
     BrowserModule,
