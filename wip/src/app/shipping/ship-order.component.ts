@@ -15,9 +15,8 @@ import 'rxjs/add/operator/map';
 export class ShipOrderComponent implements OnInit {
   orderID;
   private order: Order = new Order();
-  private orderStatusText = "jhjkhj";
   private orderStatusTexts: string[] = [
-    "Ready to pick",
+    "Ready to ship",
     "Shipped",
     "Trouble",
     "Other"
@@ -45,12 +44,10 @@ export class ShipOrderComponent implements OnInit {
   }
   MarkAsShipped(order) {
     order.status = 1;
-    this.orderStatusText = this.orderStatusTexts[order.status];
     console.log(order);
   }
   MarkWithProblem(order) {
     order.status = 2;
-    this.orderStatusText = this.orderStatusTexts[order.status];
     console.log(order);
   }
 }

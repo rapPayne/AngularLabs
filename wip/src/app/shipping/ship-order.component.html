@@ -1,6 +1,8 @@
 <h2>Ship an Order</h2> 
 
-<div class="alert">{{ order.status }} Order status {{ orderStatusText }}</div>
+<div class="alert alert-success">
+Order status: {{ orderStatusTexts[order.status] }}
+</div>
 <div class="alert alert-info">
   <h3>Instructions</h3>
   <ol>
