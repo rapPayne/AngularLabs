@@ -19,9 +19,9 @@ bash --version
 ```
 
 and you get a version.
-To install
-* node and npm
-* mongoDB
+
+* node ^6.7 and npm
+* mongoDB ^3
 
 
 Each lab's instructions are located in instructions 
@@ -58,12 +58,8 @@ LocationID is a string with this format: AASHB
 For example, 
 01A1A = Aisle 1, Slot A, Shelf 1, Bin A
 
+Only one product will be stored in a location so locationID is a primary key
 
 # RESTful APIs
 ## Orders
 * GET /api/orders/readyToShip - Get a list of orders that are ready to ship (status=0 means "ready to ship". status=1 means "shipped")
-
-# To get the site ready
-1. Restore the HTML from each of the four component HTML files.
-1. Save them in setup/assets/html
-1. Remove this section from README
