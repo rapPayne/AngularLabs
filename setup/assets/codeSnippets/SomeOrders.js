@@ -1,7 +1,7 @@
 this.orders = [
   {
     "customerID": 1056,
-    "orderDate": ISODate("2017-05-07T21:22:14.229Z"),
+    "orderDate": new Date(),
     "orderID": 10999,
     "shipAddress": "Mehrheimerstr. 369",
     "shipCity": "Köln",
@@ -33,7 +33,7 @@ this.orders = [
   },
   {
     "customerID": 1065,
-    "orderDate": ISODate("2017-05-08T07:02:37.648Z"),
+    "orderDate": new Date(),
     "orderID": 11000,
     "shipAddress": "2817 Milton Dr.",
     "shipCity": "Albuquerque",
@@ -65,7 +65,7 @@ this.orders = [
   },
   {
     "customerID": 1024,
-    "orderDate": ISODate("2017-05-09T01:05:46.254Z"),
+    "orderDate": new Date(),
     "orderID": 11001,
     "shipAddress": "Åkergatan 24",
     "shipCity": "Bräcke",
@@ -102,7 +102,7 @@ this.orders = [
   },
   {
     "customerID": 1071,
-    "orderDate": ISODate("2017-05-09T07:05:16.213Z"),
+    "orderDate": new Date(),
     "orderID": 11002,
     "shipAddress": "187 Suffolk Ln.",
     "shipCity": "Boise",
