@@ -2,8 +2,8 @@
 Labs for the Angular Courses
 
 ## Getting started
-1. Prerequisites
-1. To install on your machine
+1. [Prerequisites](#prerequisites)
+1. [To install on your machine](#to-install-on-your-machine)
 1. Lab instructions
 1. To run the labs
 1. To run a solution
