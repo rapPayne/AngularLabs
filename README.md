@@ -99,3 +99,6 @@ Only one product will be stored in a location so locationID is a primary key
 # RESTful APIs
 ## Orders
 * GET /api/orders/readyToShip - Get a list of orders that are ready to ship (status=0 means "ready to ship". status=1 means "shipped")
+* GET /api/orders/ - Get a list of all orders
+* GET /api/orders/<id> - Get a single order
+
