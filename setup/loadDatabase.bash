@@ -17,7 +17,7 @@ if ! (mongoimport --version > /dev/null) ; then
   exit 1
 fi
 
-# Make sure the JSON files are there
+# Make sure the folder holding the JSON files exists. (default name is 'db')
 filesLocation=${1:-db}
 if ! [[ -d "$filesLocation" ]] ; then
   echo "$filesLocation does not exist. Give me the directory where your json files are located." >&2

@@ -4,12 +4,14 @@ Labs for the Angular Courses
 ## Getting started
 1. [Prerequisites](#prerequisites)
 1. [To install on your machine](#to-install-on-your-machine)
-1. Lab instructions
-1. To run the labs
-1. To run a solution
+1. [Lab instructions](#lab-instructions)
+1. [To run the labs](#to-run-the-labs)
+1. [To run a solution](#to-run-a-solution)
+1. [About the warehouse](#about-the-warehouse)
+1. [RESTful APIs](#restful-apis)
 
 ## Prerequisites
-Needed for setup and to run the labs
+There are only four things needed for setup and to run the labs:
 * bash 
 
 You'll know you have it if you can ...
@@ -21,19 +23,53 @@ bash --version
 and you get a version.
 
 * node ^6.7 and npm
+
+You'll know you have it if you can ...
+
+```
+node --version
+```
+
+and you get a version greater than 6.7.0;
+
+* The Angular CLI
+
+You'll know you have it if you can ...
+
+```
+ng --version
+```
+
+and you get a version.
+
 * mongoDB ^3
+You'll know you have it if you can ...
 
+```
+mongod --version
+```
 
-Each lab's instructions are located in instructions 
+and you get a version greater than 3.
+
 
 ## To install on your machine
 
 To setup, look in the setup folder. Run these commands:
+
+```
 installLab.bash
+```
+
+## Lab instructions
+
+Each lab's instructions are located in the instructions folder. 
+
 
 ## To run the lab site
+```
 cd warehouse
 npm start
+```
 This will compile the app and begin serving it.
 Point your browser to http://localhost:4200
 

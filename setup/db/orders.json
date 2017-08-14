@@ -98,14 +98,6 @@
 }
 {
   "_id": {
-    "$oid": "585d938d61abd85fd145711e"
-  },
-  "tax": 0.0,
-  "shipping": 10.0,
-  "lines": []
-}
-{
-  "_id": {
     "$oid": "585d938d61abd85fd145711f"
   },
   "customerID": 1076,

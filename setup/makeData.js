@@ -1,3 +1,4 @@
+// One-time run to create the JSON files. No need to run as part of setup. Can be deleted once the JSON files are well-established as working properly.
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
