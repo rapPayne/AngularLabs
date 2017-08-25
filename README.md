@@ -74,7 +74,11 @@ This will compile the app and begin serving it.
 Point your browser to http://localhost:4200
 
 ## To run the solutions
-Copy all of the files from the solution folder to the /warehouse folder and follow the instructions above to run it.
+Each lab can be run without copying any files. Just open a bash shell, cd to the lab solution folder and type in 
+```
+npm start
+```
+If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder.
 
 # About the warehouse
 We have products, locations, orders, and customers. They are stored in collections (ie. tables) in a mongo database.

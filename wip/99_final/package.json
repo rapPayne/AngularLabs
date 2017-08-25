@@ -4,10 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "startApi": "node ../webServer/warehouseServer",
+    "startApi": "node ../../webServer/warehouseServer",
     "startSite": "ng serve --proxy-config proxy.conf.json",
     "start": "npm-run-all --parallel startApi startSite",
-    "startBash": "node ../webServer/warehouseServer & ng serve --proxy-config proxy.conf.json",
+    "startBash": "node ../../webServer/warehouseServer & ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
