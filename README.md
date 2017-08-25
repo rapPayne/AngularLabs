@@ -76,6 +76,7 @@ Point your browser to http://localhost:4200
 ## To run the solutions
 Each lab can be run without copying any files. Just open a bash shell, cd to the lab solution folder and type in 
 ```
+npm install
 npm start
 ```
 If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder.
