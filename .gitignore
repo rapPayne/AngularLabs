@@ -1,3 +1,4 @@
+.editorconfig
 typings
 **/app/**/*.js
 **/app/**/*.map
