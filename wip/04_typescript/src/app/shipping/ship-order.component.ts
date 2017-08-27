@@ -24,6 +24,7 @@ export class ShipOrderComponent implements OnInit {
     this.order.shipCity = "Birnin Zana";
     this.order.shipRegion = "RG";
     this.order.shipCountry = "Wakanda";
+    this.order.shipPostalCode = "5T4N-L33";
     this.order.status = 0;
     this.order.lines = [];
     const line1 = new OrderLine();
