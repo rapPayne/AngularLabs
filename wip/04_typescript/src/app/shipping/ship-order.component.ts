@@ -34,6 +34,7 @@ export class ShipOrderComponent implements OnInit {
     line1.quantity = 2;
     line1.product = new Product();
     line1.product.name = "Oreos";
+    line1.product.imageUrl = "/assets/images/productImages/34.jpg";
     const line2 = new OrderLine();
     line2.locationID = "05A3A";
     line2.price = 30.00;
@@ -41,6 +42,7 @@ export class ShipOrderComponent implements OnInit {
     line2.quantity = 7;
     line2.product = new Product();
     line2.product.name = "Peanuts";
+    line1.product.imageUrl = "/assets/images/productImages/67.jpg";
     this.order.lines.push(line1);
     this.order.lines.push(line2);
   }

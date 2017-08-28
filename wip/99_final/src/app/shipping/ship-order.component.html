@@ -41,7 +41,7 @@ Order status: {{ orderStatusTexts[order.status] }}
         <td><input type='checkbox' class="big-checkbox" /></td>
         <td *ngIf="line.locationID; else getLocation">{{ line.locationID }} ({{ line.locationID | locationExpand  }})</td>
         <td>{{ line.productID }}</td>
-        <td><img src="/assets/images/productImages/{{ line.productID }}.jpg" /></td>
+        <td><img src="{{ line.product.imageUrl }}" /></td>
         <!--td>{{ line.product.name }}</td> -->
         <td>{{ line.quantity }}</td>
         <ng-template #getLocation>
