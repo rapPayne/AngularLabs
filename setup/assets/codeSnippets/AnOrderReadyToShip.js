@@ -1,7 +1,7 @@
 this.order = new Order();
 this.order.orderID = 1;
 this.order.orderDate = new Date();
-this.order.shipVia = "GPS";
+this.order.shipVia = 1;
 this.order.shipping = 10;
 this.order.shipName = "Ororo Monroe";
 this.order.shipAddress = "777 Placeholder Pl";
