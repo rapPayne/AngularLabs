@@ -1,0 +1,34 @@
+<section class="panel panel-primary">
+    <div class="panel-heading">
+      Orders ready to be picked: 3
+    </div>
+    <div class="panel-body">
+      <p class="alert alert-danger">
+        Our customers are our top priority! Please make sure these orders are picked, packed, and shipped as soon as possible.
+      </p>
+      <p class="alert alert-info">
+        All orders have been taken care of.
+      </p>
+    </div>
+    <div class="container">
+      <div class="header-row row">
+        <div class="col-xs-3">Order</div>
+        <div class="col-xs-4">Date</div>
+        <div class="col-xs-2">Products</div>
+        <div class="col-xs-3">Destination</div>
+      </div>
+  
+      <div *ngFor="let order of orders" class="container order-row">
+        <div class="row row-1">
+          <div class="col-xs-3">{{ order.orderID }}</div>
+          <div class="col-xs-4">{{ order.orderDate }}</div>
+          <div class="col-xs-2">{{ order.lines.length }}</div>
+          <div class="col-xs-3"></div>
+        </div>
+        <div class="row row-2">
+          <div class="col-xs-3"></div>
+          <div class="col-xs-9">{{ order.shipAddress }}, {{ order.shipCity }}, {{ order.shipRegion }}, {{ order.shipPostalCode }}</div>
+        </div>
+      </div>
+    </div> <!-- End of container div -->
+  </section> <!-- End of panel -->
