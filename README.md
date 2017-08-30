@@ -106,4 +106,11 @@ Only one product will be stored in a location so locationID is a primary key
 * GET /api/orders/readyToShip - Get a list of orders that are ready to ship (status=0 means "ready to ship". status=1 means "shipped")
 * GET /api/orders/ - Get a list of all orders
 * GET /api/orders/<id> - Get a single order
-
+## Products
+* GET /api/products - All products
+* GET /api/products/<id> - A single product with that id (ids are between 1 and about 77 currently)
+* GET /api/products/featured - All featured products (Those we want to promote. Have featured==true)
+* GET /api/products?search=<searchString> - All products with searchString as part of the name.
+* PUT /api/products - Insert a new product into the database. The product's fields are in the body.
+* PATCH /api/products/<id> - Update the product. Updated fields are in the body.
+* DELETE /api/products/<id> - Delete the product
