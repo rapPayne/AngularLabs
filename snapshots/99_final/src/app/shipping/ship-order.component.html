@@ -1,16 +1,24 @@
-<h2>Ship an Order</h2> 
+<h2>Ship an Order</h2>
 
 <div class="alert alert-success">
-Order status: {{ orderStatusTexts[order.status] }}
+  Order status: {{ orderStatusTexts[order.status] }}
 </div>
-<div class="alert alert-info">
-  <h3>Instructions</h3>
-  <ol>
-    <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
-    <li>Pick the items and check the <i>Got it</i> box.</li>
-    <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
-  </ol>
-  <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+<div [ngSwitch]="order.status">
+  <div class="alert alert-info" *ngSwitchCase="0">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
+      <li>Pick the items and check the <i>Got it</i> box.</li>
+      <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+    </ol>
+    <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+  </div>
+  <div class="alert alert-danger" *ngSwitchCase="1">
+    This order has already shipped. Do not pick it.
+  </div>
+  <div class="alert alert-danger" *ngSwitchCase="2">
+    Do not pick this order. A supervisor needs to review it.
+  </div>
 </div>
 <section id="orderInfo">
   <ul class="list-group">
@@ -39,7 +47,7 @@ Order status: {{ orderStatusTexts[order.status] }}
     <tbody>
       <tr *ngFor="let line of order.lines">
         <td><input type='checkbox' class="big-checkbox" /></td>
-        <td *ngIf="line.locationID; else getLocation">{{ line.locationID }} ({{ line.locationID | locationExpand  }})</td>
+        <td *ngIf="line.locationID; else getLocation">{{ line.locationID }} ({{ line.locationID | locationExpand }})</td>
         <td>{{ line.productID }}</td>
         <td><img src="/assets/images/productImages/{{ line.productID }}.jpg" /></td>
         <!--td>{{ line.product.name }}</td> -->
