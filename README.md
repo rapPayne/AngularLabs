@@ -106,6 +106,12 @@ Only one product will be stored in a location so locationID is a primary key
 * GET /api/orders/readyToShip - Get a list of orders that are ready to ship (status=0 means "ready to ship". status=1 means "shipped")
 * GET /api/orders/ - Get a list of all orders
 * GET /api/orders/<id> - Get a single order
+* PATCH /api/orders/<id>/markAsShipped - Mark the order as "shipped" (status=1)
+* PATCH /api/orders/<id>/markAsProblem - Mark the order as "has a problem" (status=2)
+* POST /api/orders/ - Create a new order. New order record is in the body.
+* PUT /api/orders/<id> - Replace the order with what is in the body.
+* DELETE /api/orders/<id> - Delete the order
+* PATCH /api/orders/<id> - Update the order with the values in the body.
 ## Products
 * GET /api/products - All products
 * GET /api/products/<id> - A single product with that id (ids are between 1 and about 77 currently)
@@ -114,3 +120,6 @@ Only one product will be stored in a location so locationID is a primary key
 * PUT /api/products - Insert a new product into the database. The product's fields are in the body.
 * PATCH /api/products/<id> - Update the product. Updated fields are in the body.
 * DELETE /api/products/<id> - Delete the product
+## Customers
+## Categories
+## Locations
