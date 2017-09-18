@@ -15,9 +15,9 @@
     <label class="control-label" for="trackingNumber">Tracking number</label>
     <input class="form-control" id="trackingNumber">
   </div>
-  <button class="btn btn-primary btn-large">Continue</button>
+  <button (click)="saveTrackingNumber()" class="btn btn-primary btn-large">Continue</button>
 </section>
-<div>
+<div *ngIf="showForm">
   <section class="well" id="productInfo">
     <div class="control-group">
       <label class="control-label" for="productName">Product Name</label>
@@ -38,7 +38,7 @@
       <input class="form-control" id="quantity" step="1" type="number">
     </div>
     <div class="control-group">
-      <input class="btn btn-primary" type="submit" value="Receive product" />
+      <input (click)="receiveProduct()" class="btn btn-primary" type="submit" value="Receive product" />
     </div>
   </section>
   <section id="orderContents">
@@ -61,7 +61,7 @@
           <td>04A4D</td>
         </tr>
         <tr>
-          <td><img alt="Jalapeno Ketchup" src="/assets/images/productImages/13.jpg"></td>
+          <td><img alt="Jalapeno Ketchup" src="/assets/images/productImages/13.jpg" class="img-responsive"></td>
           <td>12</td>
           <td>jalapeno Ketchup</td>
           <td>11</td>
@@ -85,6 +85,6 @@
     </table>
   </section>
   <section>
-    <button class="btn btn-lg">Finished receiving</button>
+    <button (click)="finishedReceiving()" class="btn btn-lg">Finished receiving</button>
   </section>
 </div>
