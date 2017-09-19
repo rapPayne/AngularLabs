@@ -1,0 +1,17 @@
+.header-row {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.row-1, .row-2 {
+  margin: 5px 0;
+}
+.row-1 {
+  border-top: 1px solid black;
+  padding-top: 5px;
+}
+
+.row-2 {
+  padding-bottom: 5px;
+  font-weight: bolder;
+}
