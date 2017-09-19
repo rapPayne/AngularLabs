@@ -51,7 +51,6 @@ export class ShipOrderComponent implements OnInit {
   }
 
   isReadyToShip(order) {
-    order.lines.forEach(line => line.picked = true);
     return order.lines.every(line => line.picked);
   }
 
