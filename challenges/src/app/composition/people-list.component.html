@@ -1,0 +1,7 @@
+<p>
+  people-list works!
+</p>
+<input [(ngModel)]="company" name="company" />
+<div *ngFor="let p of people">
+  <demo-person-card [(company)]="company" [person]="p" (removePerson)="deletePerson($event)"></demo-person-card>
+</div> 

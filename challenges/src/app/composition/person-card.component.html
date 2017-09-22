@@ -1,0 +1,17 @@
+<div class="row well">
+  <div class="col-sm-3">
+    <img src="{{person.picture.large}}" alt="{{person.name.first}}" />
+  </div>
+  <div class="col-sm-9">
+    <span (click)="deletePerson(person)" class="glyphicon glyphicon-trash"></span>
+    <p class="name">{{person.name.first}} {{person.name.last}}</p>
+    <p class="address">
+      {{person.location.street}}
+      {{person.location.city}}, {{person.location.state}}, {{person.location.postcode}}
+    </p>
+    <p>Email: <a href="mailto:{{person.email}}">{{person.email}}</a></p>
+    <p>Phone: <a [href]="'tel:'+ person.phone">{{person.phone}}</a></p>
+    <label for="company">Company</label>
+    <input id="company" [(ngModel)]="company" name="company" />
+  </div>
+</div>
