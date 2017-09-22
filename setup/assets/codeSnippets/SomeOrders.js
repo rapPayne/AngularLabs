@@ -7,7 +7,7 @@ this.orders = [
     "shipCity": "Köln",
     "shipCountry": "Germany",
     "shipName": "Ottilies Käseladen",
-    "shipPostalCode": 50739,
+    "shipPostalCode": "50739",
     "shipRegion": "",
     "shipVia": 2,
     "tax": 0,
@@ -15,17 +15,17 @@ this.orders = [
     "lines": [
       {
         "productID": 41,
-        "unitPrice": 9.65,
+        "price": 9.65,
         "quantity": 20
       },
       {
         "productID": 51,
-        "unitPrice": 53,
+        "price": 53,
         "quantity": 15
       },
       {
         "productID": 77,
-        "unitPrice": 13,
+        "price": 13,
         "quantity": 21
       }
     ],
@@ -39,7 +39,7 @@ this.orders = [
     "shipCity": "Albuquerque",
     "shipCountry": "USA",
     "shipName": "Rattlesnake Canyon Grocery",
-    "shipPostalCode": 87110,
+    "shipPostalCode": "87110",
     "shipRegion": "NM",
     "shipVia": 3,
     "tax": 0,
@@ -47,17 +47,17 @@ this.orders = [
     "lines": [
       {
         "productID": 4,
-        "unitPrice": 22,
+        "price": 22,
         "quantity": 25
       },
       {
         "productID": 24,
-        "unitPrice": 4.5,
+        "price": 4.5,
         "quantity": 30
       },
       {
         "productID": 77,
-        "unitPrice": 13,
+        "price": 13,
         "quantity": 30
       }
     ],
@@ -79,22 +79,22 @@ this.orders = [
     "lines": [
       {
         "productID": 7,
-        "unitPrice": 30,
+        "price": 30,
         "quantity": 60
       },
       {
         "productID": 22,
-        "unitPrice": 21,
+        "price": 21,
         "quantity": 25
       },
       {
         "productID": 46,
-        "unitPrice": 12,
+        "price": 12,
         "quantity": 25
       },
       {
         "productID": 55,
-        "unitPrice": 24,
+        "price": 24,
         "quantity": 6
       }
     ],
@@ -108,7 +108,7 @@ this.orders = [
     "shipCity": "Boise",
     "shipCountry": "USA",
     "shipName": "Save-a-lot Markets",
-    "shipPostalCode": 83720,
+    "shipPostalCode": "83720",
     "shipRegion": "ID",
     "shipVia": 1,
     "tax": 0,
@@ -116,22 +116,22 @@ this.orders = [
     "lines": [
       {
         "productID": 13,
-        "unitPrice": 6,
+        "price": 6,
         "quantity": 56
       },
       {
         "productID": 35,
-        "unitPrice": 18,
+        "price": 18,
         "quantity": 15
       },
       {
         "productID": 42,
-        "unitPrice": 14,
+        "price": 14,
         "quantity": 24
       },
       {
         "productID": 55,
-        "unitPrice": 24,
+        "price": 24,
         "quantity": 40
       }
     ],
