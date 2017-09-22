@@ -7,3 +7,6 @@ These are the class challenges and walkthroughs.
 cd challenges
 ng serve
 ```
+Then browse to http://localhost:4200
+
+
