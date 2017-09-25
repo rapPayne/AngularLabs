@@ -20,7 +20,7 @@ node ./setOrderDates.js
 
 # Run npm install for the webserver
 echo 'Installing all libraries for the web server. This may take a little while.'
-cd ../webserver
+cd ../webServer
 npm install
 
 echo ""
