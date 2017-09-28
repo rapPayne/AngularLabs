@@ -2,3 +2,9 @@
   transform-origin: center 40%;
   transform: scale(4);
 }
+
+input.ng-touched.ng-invalid {
+  background-color: pink;
+  color: red;
+  font-weight: bolder;
+}
