@@ -1,7 +1,8 @@
 <p>
   people-list works!
 </p>
-<input [(ngModel)]="company" name="company" />
-<div *ngFor="let p of people">
-  <demo-person-card [(company)]="company" [person]="p" (removePerson)="deletePerson($event)"></demo-person-card>
-</div> 
+<div (scroll)="scrolled($event)" >
+<div *ngFor="let person of people">
+<demo-person (delete)="deleteUserFromList($event)" [person]="person"></demo-person>
+</div>
+</div>

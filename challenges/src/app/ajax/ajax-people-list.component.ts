@@ -14,13 +14,14 @@ export class AjaxPeopleListComponent implements OnInit {
   constructor(private _http: Http) { }
 
   ngOnInit() {
-    this.getPeople(10);
+    //this.getPeople(10);
     window.addEventListener('scroll', (e) => {
-      this.scrolled(e);
+      //this.scrolled(e);
     });
   }
 
   scrolled(e) {
+    console.log('scrolling')
     if (this.fetching)
       return;
     var w = e.path[1];
@@ -33,11 +34,13 @@ export class AjaxPeopleListComponent implements OnInit {
 
   getPeople(numberOfPeople) {
     this.fetching = true;
+    console.log("getting")
     this._http.get(`https://randomuser.me/api/?results=${numberOfPeople}`)
-      .subscribe(
+      .toPromise().then(
       res => {
         const ppl = res.json().results;
-        this.people.push(...ppl);
+        console.log("got", ppl)
+                this.people.push(...ppl);
         this.fetching = false;
       },
       err => { console.error(err); }

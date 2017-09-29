@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
 import { PeopleListComponent } from './composition/people-list.component';
-import { PersonCardComponent } from './composition/person-card.component';
+import { PersonComponent } from './composition/person.component';
+import { ObservableComponent } from './observable/observable.component';
+import { PeopleService } from './people.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { PersonCardComponent } from './composition/person-card.component';
     AppComponent,
     FormsDemoComponent,
     PeopleListComponent,
-    PersonCardComponent
+    PersonComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { PersonCardComponent } from './composition/person-card.component';
     HttpModule,
     router
   ],
-  providers: [],
+  providers: [PeopleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

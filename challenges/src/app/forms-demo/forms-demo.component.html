@@ -35,3 +35,6 @@
   </div>
   {{ givenName }} {{ ssn }}
 </form>
+<div *ngFor="let person of persons">
+  {{ person.name.first }} {{ person.name.last }}
+</div>
