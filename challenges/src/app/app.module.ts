@@ -12,6 +12,8 @@ import { PeopleListComponent } from './composition/people-list.component';
 import { PersonComponent } from './composition/person.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PeopleService } from './people.service';
+import { WelcomeComponent } from './welcome.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PeopleService } from './people.service';
     FormsDemoComponent,
     PeopleListComponent,
     PersonComponent,
-    ObservableComponent
+    ObservableComponent,
+    WelcomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
