@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from '../people.service';
 
 @Component({
   selector: 'app-forms-demo',
@@ -8,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class FormsDemoComponent implements OnInit {
   givenName:string;
   ssn:string;
+  persons;
 
-  constructor() { }
+  constructor(private _peopleService:PeopleService) { }
 
   ngOnInit() {
+    this.persons = this._peopleService.people;
   }
 
   processNameAndSSN() {
