@@ -5,73 +5,24 @@ Labs for the Angular Courses
 1. [Prerequisites](#prerequisites)
 1. [To install on your machine](#to-install-on-your-machine)
 1. [Lab instructions](#lab-instructions)
-1. [To run the labs](#to-run-the-labs)
 1. [To run a solution](#to-run-a-solution)
 1. [About the warehouse](#about-the-warehouse)
 1. [RESTful APIs](#restful-apis)
+1. [Instructor notes](#instructor-notes)
 
 ## Prerequisites
 There are only four things needed for setup and to run the labs:
-* bash 
+1. bash
+1. node ^6.7 with npm
+1. The Angular cli (ng)
+1. mongoDB
 
-You'll know you have it if you can ...
+If you want some installation help including verification steps, go [here](setup/Angular Class Setup.pdf).
 
-```
-bash --version
-```
-
-and you get a version.
-
-* node ^6.7 and npm
-
-You'll know you have it if you can ...
-
-```
-node --version
-```
-
-and you get a version greater than 6.7.0;
-
-* The Angular CLI
-
-You'll know you have it if you can ...
-
-```
-ng --version
-```
-
-and you get a version.
-
-* mongoDB ^3
-You'll know you have it if you can ...
-
-```
-mongod --version
-```
-
-and you get a version greater than 3.
-
-
-## To install on your machine
-
-To setup, look in the setup folder. Run these commands:
-
-```
-installLab.bash
-```
 
 ## Lab instructions
 
-Each lab's instructions are located in the instructions folder. 
-
-
-## To run the lab site
-```
-cd warehouse
-npm start
-```
-This will compile the app and begin serving it.
-Point your browser to http://localhost:4200
+Each lab's instructions are located in the [instructions](instructions) folder. 
 
 ## To run the solutions
 Each lab can be run without copying any files. Just open a bash shell, cd to the lab solution folder and type in 
@@ -112,6 +63,7 @@ Only one product will be stored in a location so locationID is a primary key
 * PUT /api/orders/<id> - Replace the order with what is in the body.
 * DELETE /api/orders/<id> - Delete the order
 * PATCH /api/orders/<id> - Update the order with the values in the body.
+
 ## Products
 * GET /api/products - All products
 * GET /api/products/<id> - A single product with that id (ids are between 1 and about 77 currently)
@@ -120,6 +72,56 @@ Only one product will be stored in a location so locationID is a primary key
 * PUT /api/products - Insert a new product into the database. The product's fields are in the body.
 * PATCH /api/products/<id> - Update the product. Updated fields are in the body.
 * DELETE /api/products/<id> - Delete the product
+
 ## Customers
 ## Categories
 ## Locations
+  
+#Instructor Notes
+Things that may be helpful to instructors teaching this course.
+## Approximate timing
+###Monday
+* Intro
+* Intro Lab
+* Angular CLI
+* Angular CLI Lab
+* Lunch
+* Big Picture
+* Big Picture Lab
+* TypeScript
+
+###Tuesday
+* TypeScript Lab
+* Components Intro
+* Components Intro Lab
+* Lunch
+* Property Binding
+* Property Binding Lab
+* Built-in Directives
+
+###Wednesday
+* Built-in Directives Lab
+* Routing
+* Routing Lab
+* Lunch
+* Event Binding
+* Event Binding Lab
+* Forms and 2-way Binding
+* Forms and 2-way Binding Lab
+
+###Thursday
+* Composition with Components
+* Composition with Components Lab
+* Ajax
+* Lunch
+* Ajax Lab
+* Observables
+* Observables Lab
+###Friday
+* Services
+* Services Lab
+* Pipes
+* Lunch
+* Pipes Lab
+* Modules
+* Modules Lab
