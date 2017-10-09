@@ -14,10 +14,10 @@ Labs for the Angular Courses
 There are only four things needed for setup and to run the labs:
 1. bash
 1. node ^6.7 with npm
-1. The Angular cli (ng)
-1. mongoDB
+1. The Angular cli (ng) ^1.0
+1. mongoDB ^3.2
 
-If you want some installation help including verification steps, go [here](setup/Angular Class Setup.pdf).
+If you want some installation help including verification steps, go [here](setup/Angular Class Setup.pdf) .
 
 
 ## Lab instructions
