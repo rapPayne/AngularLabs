@@ -78,9 +78,13 @@ Only one product will be stored in a location so locationID is a primary key
 ## Locations
   
 #Instructor Notes
+
 Things that may be helpful to instructors teaching this course.
+
 ## Approximate timing
+
 ###Monday
+
 * Intro
 * Intro Lab
 * Angular CLI
@@ -91,6 +95,7 @@ Things that may be helpful to instructors teaching this course.
 * TypeScript
 
 ###Tuesday
+
 * TypeScript Lab
 * Components Intro
 * Components Intro Lab
@@ -100,6 +105,7 @@ Things that may be helpful to instructors teaching this course.
 * Built-in Directives
 
 ###Wednesday
+
 * Built-in Directives Lab
 * Routing
 * Routing Lab
@@ -110,6 +116,7 @@ Things that may be helpful to instructors teaching this course.
 * Forms and 2-way Binding Lab
 
 ###Thursday
+
 * Composition with Components
 * Composition with Components Lab
 * Ajax
@@ -117,7 +124,9 @@ Things that may be helpful to instructors teaching this course.
 * Ajax Lab
 * Observables
 * Observables Lab
+
 ###Friday
+
 * Services
 * Services Lab
 * Pipes
