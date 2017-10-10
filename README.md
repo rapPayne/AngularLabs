@@ -14,7 +14,7 @@ Labs for the Angular Courses
 There are only four things needed for setup and to run the labs:
 1. bash
 1. node ^6.7 with npm
-1. The Angular cli (ng) ^1.0
+1. The Angular cli (ng) ^1.3
 1. mongoDB ^3.2
 
 If you want some installation help including verification steps, go [here](setup/Angular%20Class%20Setup.pdf) .
@@ -74,9 +74,26 @@ Only one product will be stored in a location so locationID is a primary key
 * DELETE /api/products/<id> - Delete the product
 
 ## Customers
+* GET /api/customers - All customers
+* POST /api/customers - Create a new customer
+* GET /api/customers/<id> - A single customer. (ids are between 1 and 78)
+* PUT /api/customers/<id> - Replace a single customer
+* PATCH /api/customers/<id> - Update a single customer
+* DELETE /api/customers/<id> - Delete a single customer
+
 ## Categories
+* GET /api/categories - All categories
+* GET /api/categories/<id> - Read one category
+
 ## Locations
-  
+* GET /api/locations - All locations
+* POST /api/locations - Creaes a new location
+* GET /api/locations/<id> - Read location for locationID <id>
+* PUT /api/locations/<id> - Replace location at locationID <id>
+* PATCH /api/locations/<id> - Update location at locationID <id>
+* DELETE /api/locations/<id> - Delete location ID <id>
+* GET /api/locations/forProduct/<id> - Get all locations where product <id> can be found.
+
 # Instructor Notes
 
 Things that may be helpful to instructors teaching this course.
