@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
 
 import { router } from './app.router';
+import { SolutionsModule } from './solutions/solutions.module';
+//import { solutionsRouter } from './solutions/solutions.router';
 
 import { AppComponent } from './app.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
@@ -27,7 +29,9 @@ import { NotFoundComponent } from './not-found.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    router
+    SolutionsModule,
+    //solutionsRouter,
+    router,
   ],
   providers: [],
   bootstrap: [AppComponent]

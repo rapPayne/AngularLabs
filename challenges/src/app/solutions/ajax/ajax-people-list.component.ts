@@ -14,9 +14,9 @@ export class AjaxPeopleListComponent implements OnInit {
   constructor(private _http: Http) { }
 
   ngOnInit() {
-    //this.getPeople(10);
+    this.getPeople(10);
     window.addEventListener('scroll', (e) => {
-      //this.scrolled(e);
+      this.scrolled(e);
     });
   }
 

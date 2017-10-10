@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PeopleService } from '../people.service';
+import { PeopleService } from '../services/people.service';
 
 @Component({
   selector: 'app-forms-demo',

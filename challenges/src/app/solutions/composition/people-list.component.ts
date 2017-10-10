@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { people } from '../../assets/people';
+import { people } from '../../../assets/people';
 import { Http } from '@angular/http';
-import { PeopleService } from '../people.service';
+import { PeopleService } from '../services/people.service';
 import 'rxjs/add/operator/toPromise';
 @Component({
   selector: 'demo-people-list',
