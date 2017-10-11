@@ -37,16 +37,20 @@ We have products, locations, orders, and customers. They are stored in collectio
 
 ## Orders
 Have a status:
-* 0 - Ready to pick, pack, and ship
-* 1 - Shipped
-* 2 - Has problem(s) that a supervisor should fix
+
+Status | Meaning
+-------|-----------
+0      | Ready to pick, pack, and ship
+1      | Shipped
+2      | Has problem(s) that a supervisor should fix
 
 ## Locations
-LocationID is a string with this format: AASHB
+LocationID is a string with this format: AASHB where ...
 * AA- Aisle - 01-99
 * S - Slot - A-Z
 * H - Shelf - 1-9
 * B - Bin - A-Z
+
 For example, 
 01A1A = Aisle 1, Slot A, Shelf 1, Bin A
 
