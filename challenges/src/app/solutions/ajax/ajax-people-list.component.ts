@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Http } from '@angular/http';
 
@@ -15,13 +15,12 @@ export class AjaxPeopleListComponent implements OnInit {
 
   ngOnInit() {
     this.getPeople(10);
-    window.addEventListener('scroll', (e) => {
-      this.scrolled(e);
-    });
   }
 
+  //Host listener allows us to have event handlers in a component but listen to an event on an object which is "hosting" this component.
+  //Using "window" here but we could also use "document"
+  @HostListener('window:scroll', ['$event'])
   scrolled(e) {
-    console.log('scrolling')
     if (this.fetching)
       return;
     var w = e.path[1];
@@ -52,3 +51,11 @@ export class AjaxPeopleListComponent implements OnInit {
   }
 
 }
+
+// declare interface String {
+//   properCase():string;
+// }
+// String.prototype.properCase = function(this:string)  {
+//   console.log(this);
+//   this.split(' ').map(word => word[0].toUpperCase() + word.slice(1).toLowerCase());
+// };

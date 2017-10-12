@@ -14,6 +14,7 @@ import { PeopleListComponent } from './composition/people-list.component';
 import { ObservableComponent } from './observable/observable.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
+import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found.component';
     PeopleListComponent,
     ObservableComponent,
     WelcomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    BuiltInDirectivesComponent
   ],
   imports: [
     BrowserModule,
