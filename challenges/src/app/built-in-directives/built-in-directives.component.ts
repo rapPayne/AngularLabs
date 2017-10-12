@@ -7,7 +7,7 @@ import { people } from './listOfPeople';
   styleUrls: ['./built-in-directives.component.css']
 })
 export class BuiltInDirectivesComponent implements OnInit {
-  people:Array<object>;
+  people;
   constructor() { }
 
   ngOnInit() {
