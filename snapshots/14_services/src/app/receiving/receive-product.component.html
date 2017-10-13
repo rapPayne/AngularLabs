@@ -1,0 +1,70 @@
+<h2>Receiving Products</h2>
+<p *ngIf="user">Welcome, {{user.firstName}} {{user.lastName}}</p>
+<div class="alert alert-success"> Order status </div>
+<div class="alert alert-info">
+  <h3>Instructions</h3>
+  <ol>
+    <li>Scan or enter a tracking number.</li>
+    <li>Enter a product ID if you know it or begin entering a description and choose from options</li>
+    <li>Enter the number of items and check the <i>Got it</i> box.</li>
+    <li>After you've picked, packed, and shipped your last item, click <i>Finished receiving</i></li>
+  </ol>
+  <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+</div>
+<section id="trackingInfo" [ngClass]="{'bg-success':trackingControl.touched&&trackingControl.valid,'fg-success':trackingControl.touched&&trackingControl.valid,'bg-danger':trackingControl.touched&&trackingControl.invalid,'fg-danger':trackingControl.touched&&trackingControl.invalid}">
+  <div class="control-group">
+    <label class="control-label" for="trackingNumber">Tracking number</label>
+    <input [(ngModel)]="trackingNumber" #trackingControl="ngModel" class="form-control" id="trackingNumber" required pattern="^\d[A-Z]\d{16}$|^\d{14,15}$|^9[2-4]\d{2}( ?\d{4}){4} ?\d{2}$">
+  </div>
+  <button (click)="saveTrackingNumber(trackingNumber)" class="btn btn-primary btn-large">Continue</button>
+</section>
+<div *ngIf="showForm">
+  <section class="well" id="productInfo">
+    <div class="control-group">
+      <label class="control-label" for="productName">Product Name</label>
+      <input class="form-control" id="productName">
+    </div>
+    <div class="list-group" id="productList">
+      <button class="list-group-item">A placeholder product</button>
+      <button class="list-group-item">Another placeholder product</button>
+      <button class="list-group-item">Yet another product</button>
+    </div>
+    <p>... OR ...</p>
+    <div class="control-group">
+      <label class="control-label" for="productID">Product ID</label>
+      <input class="form-control" id="productID" [(ngModel)]="productID">
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="quantity">Quantity Received</label>
+      <input class="form-control" id="quantity" step="1" type="number" [(ngModel)]="quantity">
+    </div>
+    <div class="control-group">
+      <input (click)="receiveProduct(productID, quantity)" class="btn btn-primary" type="submit" value="Receive product" />
+    </div>
+  </section>
+  <section id="orderContents">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of receivedProducts">
+          <td><img alt="{{item.product.description}}" src="{{item.product.imageUrl}}"></td>
+          <td>{{item.product.productID}}</td>
+          <td>{{item.product.name}}</td>
+          <td>{{item.quantity}}</td>
+          <td>location</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <button (click)="finishedReceiving()" class="btn btn-lg">Finished receiving</button>
+  </section>
+</div>

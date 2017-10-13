@@ -1,0 +1,10 @@
+<div>
+  <label class="control-label" for="username">Username</label>
+  <input type="text" id="username" [(ngModel)]="username"/>
+  <label class="control-label" for="password">Password</label>
+  <input type="text" id="password" [(ngModel)]="password"/>
+  <button (click)="login()">Login</button>
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</div>
