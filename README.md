@@ -2,15 +2,14 @@
 Labs for the Angular Courses
 
 ## Getting started
-1. [Prerequisites](#prerequisites)
-1. [To install on your machine](#to-install-on-your-machine)
+1. [Setup](#setup)
 1. [Lab instructions](#lab-instructions)
 1. [To run a solution](#to-run-a-solution)
 1. [About the warehouse](#about-the-warehouse)
 1. [RESTful APIs](#restful-apis)
 1. [Instructor notes](#instructor-notes)
 
-## Prerequisites
+## Setup
 There are only four things needed for setup and to run the labs:
 1. bash
 1. node ^6.7 with npm
@@ -19,12 +18,11 @@ There are only four things needed for setup and to run the labs:
 
 If you want some installation help including verification steps, go [here](setup/Angular%20Class%20Setup.pdf) .
 
-
 ## Lab instructions
 
 Each lab's instructions are located in the [instructions](instructions) folder. 
 
-## To run the solutions
+## To run a solution
 Each lab can be run without copying any files. Just open a bash shell, cd to the lab solution folder and type in 
 ```
 npm install
@@ -33,7 +31,7 @@ npm start
 If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder.
 
 # About the warehouse
-We have products, locations, orders, and customers. They are stored in collections (ie. tables) in a mongo database.
+We have products, locations, orders, and customers. They are stored in collections (aka tables) in a mongo database.
 
 ## Orders
 Have a status:
@@ -57,6 +55,7 @@ For example,
 Only one product will be stored in a location so locationID is a primary key
 
 # RESTful APIs
+
 ## Orders
 * GET /api/orders/readyToShip - Get a list of orders that are ready to ship (status=0 means "ready to ship". status=1 means "shipped")
 * GET /api/orders/ - Get a list of all orders
