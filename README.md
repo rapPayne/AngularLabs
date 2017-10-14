@@ -154,3 +154,6 @@ Things that may be helpful to instructors teaching this course.
 * Pipes Lab
 * Modules
 * Modules Lab
+
+## Thanks
+* Noel Bergman - Solutions to some labs and proofreading
