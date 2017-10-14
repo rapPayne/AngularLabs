@@ -42,7 +42,7 @@ export class PeopleListComponent implements OnInit {
 
   scrolled(e) {
     if (this.fetching) 
-      return;
+      return; 
     var w = e.path[1];
     let d = e.path[0];
     let pos = (w.innerHeight + w.scrollY) / d.body.offsetHeight;
