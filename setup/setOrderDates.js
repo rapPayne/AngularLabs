@@ -38,7 +38,7 @@ function updateOrders(allOrders) {
       try {
         const status = statusCounter++ > 14 ? 1 : 0;  // Set status to shipped (status=1) for all orders > about two weeks ago. Not shipped is status 0.
         orderDate -= Math.random() * (1000 * 60 * 60 * 24);  // Subtract a random portion of a day
-        wmsDb.collection('orders').updateOne({ orderID: order.orderID }, { $set: { orderDate: new Date(orderDate), status: status, shipVia: null } });
+        wmsDb.collection('orders').updateOne({ orderID: order.orderID }, { $set: { orderDate: new Date(orderDate), status: status } });
       } catch (e) {
         reject(e);
       }
