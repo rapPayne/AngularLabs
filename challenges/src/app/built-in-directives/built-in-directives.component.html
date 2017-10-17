@@ -1,11 +1,16 @@
 <h1>
-  Lots o' people
+  Cool people
 </h1>
-<div *ngFor="let person of people" class="panel panel-primary ">
+<div class="panel panel-primary ">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ person.name.first }} {{ person.name.last }}</h3>
+    <h3 class="panel-title">First Last</h3>
   </div>
-  <div class="panel-body">
-    {{ person.gender }}
+  <div class="panel-body row">
+    <div class="col-sm-3">
+      <img src="Image" alt="First Last" />
+    </div>
+    <div class="col-sm-9">
+    Gender
+  </div>
   </div>
 </div>
