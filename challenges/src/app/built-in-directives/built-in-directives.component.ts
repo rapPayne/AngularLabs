@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { people } from './listOfPeople';
 
 @Component({
   selector: 'demo-built-in-directives',
@@ -11,8 +10,6 @@ export class BuiltInDirectivesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.people = people;
-    console.log(this.people);
   }
 
 }
