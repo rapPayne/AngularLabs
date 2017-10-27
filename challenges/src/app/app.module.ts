@@ -16,7 +16,6 @@ import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
-import { PersonDetailComponent } from './composition/person-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { PersonDetailComponent } from './composition/person-detail.component';
     WelcomeComponent,
     NotFoundComponent,
     BuiltInDirectivesComponent,
-    PersonDetailComponent,
   ],
   imports: [
     BrowserModule,

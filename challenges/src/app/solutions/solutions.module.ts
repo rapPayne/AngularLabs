@@ -10,6 +10,9 @@ import { ObservableComponent } from './observable/observable.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { PeopleListComponent } from './composition/people-list.component';
 import { PersonComponent } from './composition/person.component';
+import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
+import { BorderHoverDirective } from './custom-directives/border-hover.directive';
+//import { LazyLoadingMainComponent } from './lazy-loading/lazy-loading-main.component';
 
 @NgModule({
   imports: [
@@ -24,6 +27,9 @@ import { PersonComponent } from './composition/person.component';
     PersonComponent,
     AjaxPeopleListComponent,
     ObservableComponent,
+    CustomDirectivesComponent,
+    BorderHoverDirective
+    //LazyLoadingMainComponent,
   ],
   exports: [
 
