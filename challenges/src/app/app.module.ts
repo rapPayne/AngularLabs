@@ -15,6 +15,8 @@ import { ObservableComponent } from './observable/observable.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
+import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
+import { PersonDetailComponent } from './composition/person-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { BuiltInDirectivesComponent } from './built-in-directives/built-in-direc
     ObservableComponent,
     WelcomeComponent,
     NotFoundComponent,
-    BuiltInDirectivesComponent
+    BuiltInDirectivesComponent,
+    PersonDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { BuiltInDirectivesComponent } from './built-in-directives/built-in-direc
     SolutionsModule,
     //solutionsRouter,
     router,
+    //LazyLoadingMainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
