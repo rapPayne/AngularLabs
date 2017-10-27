@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'demo-not-found',
-  templateUrl: './not-found.component.html',
+  template: `<h1>Not Found</h1><p>You asked for something that doesn't exist yet.</p>`,
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent implements OnInit {
