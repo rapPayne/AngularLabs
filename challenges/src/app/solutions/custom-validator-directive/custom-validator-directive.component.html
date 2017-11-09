@@ -1,0 +1,40 @@
+<section class="jumbotron">
+  <h1>
+    Registration
+  </h1>
+  <div class="alert alert-info">
+    In order to use our service, we'll need your name and social security number. Please enter them below.
+  </div>
+</section>
+
+<form (ngSubmit)="processNameAndSSN()" >
+
+  <div class="form-group has-feedback">
+    <label for="givenName" class="control-label">Given name</label>
+
+    <input [(ngModel)]="givenName" #givenNameVH="ngModel" 
+    name="givenName" id="givenName" minlength="4" maxlength="10" 
+    required class="form-control" />
+    
+    <span *ngIf="givenNameVH.touched && givenNameVH.errors && givenNameVH.invalid" class="form-control-feedback">*</span>
+    <span *ngIf="givenNameVH.touched && givenNameVH.errors && givenNameVH.errors.required" class="help-block">First name is required</span>
+    <span *ngIf="givenNameVH.touched && givenNameVH.errors && givenNameVH.errors.minlength" class="help-block">I need more characters</span>
+    <span *ngIf="givenNameVH.touched && givenNameVH.errors && givenNameVH.errors.maxlength" class="help-block">Oops, your name is too long</span>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label for="ssn" class="control-label">Social Security number</label>
+    <input [(ngModel)]="ssn" name="ssn" required pattern="^\d{3}-\d{2}-\d{4}$" class="form-control" />
+    <span class="form-control-feedback">*</span>
+    <span class="help-block">We need your SSN to proceed</span>
+    <span class="help-block">That doesn't look like a SSN</span>
+  </div>
+
+  <div>
+    <input type="submit" class="btn btn-primary btn-lg" value="Go >>" />
+  </div>
+  {{ givenName }} {{ ssn }}
+</form>
+<div *ngFor="let person of persons">
+  {{ person.name.first }} {{ person.name.last }}
+</div>
