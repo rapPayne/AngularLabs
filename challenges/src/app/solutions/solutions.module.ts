@@ -11,7 +11,9 @@ import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { PeopleListComponent } from './composition/people-list.component';
 import { PersonComponent } from './composition/person.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
+import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
 import { BorderHoverDirective } from './custom-directives/border-hover.directive';
+import { SSNValidatorDirective } from './custom-validator-directive/ssn-validator';
 //import { LazyLoadingMainComponent } from './lazy-loading/lazy-loading-main.component';
 
 @NgModule({
@@ -28,7 +30,9 @@ import { BorderHoverDirective } from './custom-directives/border-hover.directive
     AjaxPeopleListComponent,
     ObservableComponent,
     CustomDirectivesComponent,
-    BorderHoverDirective
+    CustomValidatorDirectiveComponent,
+    BorderHoverDirective,
+    SSNValidatorDirective
     //LazyLoadingMainComponent,
   ],
   exports: [

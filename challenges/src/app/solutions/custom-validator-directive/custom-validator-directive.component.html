@@ -24,10 +24,10 @@
 
   <div class="form-group has-feedback">
     <label for="ssn" class="control-label">Social Security number</label>
-    <input [(ngModel)]="ssn" name="ssn" required pattern="^\d{3}-\d{2}-\d{4}$" class="form-control" />
-    <span class="form-control-feedback">*</span>
-    <span class="help-block">We need your SSN to proceed</span>
-    <span class="help-block">That doesn't look like a SSN</span>
+    <input #ssnVH="ngModel" social-security-number [(ngModel)]="ssn" name="ssn" required pattern="^\d{3}-\d{2}-\d{4}$" class="form-control" />
+    <span *ngIf="ssnVH.valid" class="form-control-feedback">*</span>
+    <span *ngIf="ssnVH.errors?.required" class="help-block">We need your SSN to proceed</span>
+    <span *ngIf="ssnVH.errors?.ssn" class="help-block">That doesn't look like a SSN</span>
   </div>
 
   <div>
@@ -35,6 +35,3 @@
   </div>
   {{ givenName }} {{ ssn }}
 </form>
-<div *ngFor="let person of persons">
-  {{ person.name.first }} {{ person.name.last }}
-</div>

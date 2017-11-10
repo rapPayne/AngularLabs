@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-forms-demo',
-  templateUrl: './forms-demo.component.html',
-  styleUrls: ['./forms-demo.component.css']
+  selector: 'app-custom-validator-directive',
+  templateUrl: './custom-validator-directive.component.html',
+  styleUrls: ['./custom-validator-directive.component.css']
 })
-export class FormsDemoComponent implements OnInit {
+export class CustomValidatorDirectiveComponent implements OnInit {
   givenName:string;
   ssn:string;
   persons;
