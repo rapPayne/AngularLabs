@@ -23,7 +23,7 @@ export class AjaxPeopleListComponent implements OnInit {
   scrolled(e) {
     if (this.fetching)
       return;
-    var w = e.path[1];
+    let w = e.path[1];
     let d = e.path[0];
     let pos = (w.innerHeight + w.scrollY) / d.body.offsetHeight;
     if (pos >= 0.85) {
@@ -51,11 +51,3 @@ export class AjaxPeopleListComponent implements OnInit {
   }
 
 }
-
-// declare interface String {
-//   properCase():string;
-// }
-// String.prototype.properCase = function(this:string)  {
-//   console.log(this);
-//   this.split(' ').map(word => word[0].toUpperCase() + word.slice(1).toLowerCase());
-// };
