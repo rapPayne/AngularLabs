@@ -15,14 +15,14 @@ if (( $? != 0 )) ; then
   exit 3
 fi
 
-# Update the order dates
-echo "Updating the Mongo database data."
-node ./setOrderDates.js
-
 # Run npm install for the webserver
 echo 'Installing all libraries for the web server. This may take a little while.'
 cd ../webServer
 npm install
+
+# Update the order dates
+echo "Updating the Mongo database data."
+node ./setOrderDates.js
 
 echo ""
 echo "Installation was successful."
