@@ -9,16 +9,17 @@ if ! (npm --version >/dev/null 2>&1) ; then
   exit 2
 fi
 
+# Run npm install for the webserver
+echo 'Installing all libraries for the web server. This may take a little while.'
+cd ../webServer
+npm install
+cd -		# Go back to setup folder
+
 # Create the wms Database
 ./loadDatabase.bash
 if (( $? != 0 )) ; then
   exit 3
 fi
-
-# Run npm install for the webserver
-echo 'Installing all libraries for the web server. This may take a little while.'
-cd ../webServer
-npm install
 
 # Update the order dates
 echo "Updating the Mongo database data."
