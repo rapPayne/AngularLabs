@@ -16,6 +16,7 @@ if (( $? != 0 )) ; then
 fi
 
 # Update the order dates
+echo "Updating the Mongo database data."
 node ./setOrderDates.js
 
 # Run npm install for the webserver
