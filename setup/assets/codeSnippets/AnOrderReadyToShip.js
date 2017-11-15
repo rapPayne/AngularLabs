@@ -26,6 +26,6 @@ line2.productID = 45;
 line2.quantity = 7;
 line2.product = new Product();
 line2.product.name = "Peanuts";
-line1.product.imageUrl = "/assets/images/productImages/67.jpg";
+line2.product.imageUrl = "/assets/images/productImages/67.jpg";
 this.order.lines.push(line1);
 this.order.lines.push(line2);
