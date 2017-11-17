@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { solutionsRouter } from "./solutions.router";
+import { LazyLoadingMainModule } from './lazyloading/lazy-loading-main.module';
 
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
@@ -20,7 +21,8 @@ import { SSNValidatorDirective } from './custom-validator-directive/ssn-validato
   imports: [
     CommonModule,
     FormsModule,
-    solutionsRouter
+    solutionsRouter,
+    LazyLoadingMainModule
   ],
   declarations: [
     BuiltInDirectivesComponent,

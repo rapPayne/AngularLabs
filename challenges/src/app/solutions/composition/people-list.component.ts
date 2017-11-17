@@ -6,7 +6,8 @@ import 'rxjs/add/operator/toPromise';
 @Component({
   selector: 'demo-people-list',
   templateUrl: './people-list.component.html',
-  styleUrls: ['./people-list.component.css']
+  styleUrls: ['./people-list.component.css'],
+  providers: [ PeopleService ],
 })
 export class PeopleListComponent implements OnInit {
   people = [];

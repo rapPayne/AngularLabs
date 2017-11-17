@@ -29,7 +29,6 @@ export class ObservableComponent implements OnInit {
   runTheObservable() {
     this.subscription = this.observable
     .subscribe((number) => {
-      console.log(`Getting a random ${number}`);
       this.numbers.unshift(number);
     });
   }
