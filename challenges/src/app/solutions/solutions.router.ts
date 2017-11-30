@@ -6,6 +6,7 @@ import { PeopleListComponent } from './composition/people-list.component';
 import { ObservableComponent } from './observable/observable.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
+import { QuerystringsComponent } from './querystrings/querystrings.component';
 
 const solutionsRoutes = [
   {path:"solutions/builtInDirectives", component: BuiltInDirectivesComponent},
@@ -15,5 +16,6 @@ const solutionsRoutes = [
   {path:"solutions/forms", component: FormsDemoComponent},
   {path:"solutions/composition", component: PeopleListComponent},
   {path:"solutions/observable", component: ObservableComponent},
+  {path:"solutions/querystrings", component: QuerystringsComponent},
 ];
 export const solutionsRouter = RouterModule.forChild(solutionsRoutes);

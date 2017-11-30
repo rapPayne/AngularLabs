@@ -14,6 +14,7 @@ import { PersonComponent } from './composition/person.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
 import { BorderHoverDirective } from './custom-directives/border-hover.directive';
+import { QuerystringsComponent } from './querystrings/querystrings.component';
 import { SSNValidatorDirective } from './custom-validator-directive/ssn-validator';
 //import { LazyLoadingMainComponent } from './lazy-loading/lazy-loading-main.component';
 
@@ -34,6 +35,7 @@ import { SSNValidatorDirective } from './custom-validator-directive/ssn-validato
     CustomDirectivesComponent,
     CustomValidatorDirectiveComponent,
     BorderHoverDirective,
+    QuerystringsComponent,
     SSNValidatorDirective
     //LazyLoadingMainComponent,
   ],
