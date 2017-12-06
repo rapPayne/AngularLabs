@@ -8,14 +8,13 @@
 </section>
 
 <form (ngSubmit)="processNameAndSSN()" >
-
+    
   <div class="form-group has-feedback">
     <label for="givenName" class="control-label">Given name</label>
-
     <input [(ngModel)]="givenName" #givenNameTR="ngModel" 
     name="givenName" id="givenName" minlength="4" maxlength="10" 
     required class="form-control" />
-    
+
     <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.invalid" class="form-control-feedback">*</span>
     <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.errors.required" class="help-block">First name is required</span>
     <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.errors.minlength" class="help-block">I need more characters</span>
@@ -35,6 +34,3 @@
   </div>
   {{ givenName }} {{ ssn }}
 </form>
-<div *ngFor="let person of persons">
-  {{ person.name.first }} {{ person.name.last }}
-</div>
