@@ -10,12 +10,14 @@ import { SolutionsModule } from './solutions/solutions.module';
 import { AppComponent } from './app.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
-import { PeopleListComponent } from './composition/people-list.component';
+import { PeopleListComponent } from './people/people-list.component';
 import { ObservableComponent } from './observable/observable.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
+import { PersonComponent } from './built-in-directives/person.component';
+import { MaskemailPipe } from './built-in-directives/maskemail.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main
     WelcomeComponent,
     NotFoundComponent,
     BuiltInDirectivesComponent,
+    PersonComponent,
+    MaskemailPipe,
   ],
   imports: [
     BrowserModule,
