@@ -1,0 +1,44 @@
+<h1>All the people</h1>
+<div class="person-list">
+  <section *ngFor="let person of people" class="person-card">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          {{ person.name.first }} {{ person.name.last }}
+            <span class="glyphicon glyphicon-trash pull-right"></span>
+            <span class="glyphicon glyphicon-pencil pull-right"></span>
+          </h3>
+      </div>
+      <div class="panel-body row">
+        <div class="col-sm-3">
+          <img [src]="person.picture?.large" alt="{{ person.name.first }} {{ person.name.last }}" class="img-responsive img-circle"
+          />
+        </div>
+        <div class="col-sm-9">
+          <ul class="list-group">
+            <li class="list-group-item">Phone: {{ person.phone }}</li>
+            <li class="list-group-item">Address:
+              <br /> {{ person.location?.street }}
+              <br /> {{ person.location?.city }}
+              <span *ngIf="person.location?.city">, </span> {{person.location?.state}} {{ person.location?.postcode }}
+            </li>
+            <li class="list-group-item">Email: {{ person.email }}</li>
+            <li class="list-group-item">Gender: {{ person.gender }}</li>
+          </ul>
+        </div>
+      </div>
+      <div *ngIf="person.isEditable" class="panel-body row">
+        <h1>Edit this person</h1>
+        <form>
+          <div class="form-group">
+            <label for="first">First</label>
+            <input id="first" class="form-control" />
+          </div>
+          <div>
+            <input type="submit" value="Save" class="btn btn-primary" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

@@ -16,8 +16,6 @@ import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
 import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
-import { PersonComponent } from './built-in-directives/person.component';
-import { MaskemailPipe } from './built-in-directives/maskemail.pipe';
 
 @NgModule({
   declarations: [
@@ -28,9 +26,7 @@ import { MaskemailPipe } from './built-in-directives/maskemail.pipe';
     ObservableComponent,
     WelcomeComponent,
     NotFoundComponent,
-    BuiltInDirectivesComponent,
-    PersonComponent,
-    MaskemailPipe,
+    BuiltInDirectivesComponent
   ],
   imports: [
     BrowserModule,

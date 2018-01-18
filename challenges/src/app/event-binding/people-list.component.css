@@ -1,0 +1,7 @@
+.person-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.person-card {
+  margin: 10px;
+}
