@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { people } from './listOfPeople';
 
 @Component({
   selector: 'demo-people-list',

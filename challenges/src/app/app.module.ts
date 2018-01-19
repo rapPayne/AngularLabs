@@ -9,8 +9,6 @@ import { SolutionsModule } from './solutions/solutions.module';
 
 import { AppComponent } from './app.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
-import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
-import { PeopleListComponent } from './people/people-list.component';
 import { ObservableComponent } from './observable/observable.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
@@ -19,14 +17,12 @@ import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main
 
 @NgModule({
   declarations: [
-    AjaxPeopleListComponent,
     AppComponent,
     FormsDemoComponent,
-    PeopleListComponent,
     ObservableComponent,
     WelcomeComponent,
     NotFoundComponent,
-    BuiltInDirectivesComponent
+    BuiltInDirectivesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,9 @@
 <h1>All the people</h1>
-<section *ngFor="let person of people" class="person-card">
+<section class="person-card">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">{{ person.name.first }} {{ person.name.last }}
-        <span class="glyphicon glyphicon-trash pull-right"></span>
+      <h3 class="panel-title">
+        {{ person.name.first }} {{ person.name.last }}
       </h3>
     </div>
     <div class="panel-body row">
@@ -16,7 +16,7 @@
           <li class="list-group-item">Phone: {{ person.phone }}</li>
           <li class="list-group-item">Address:
             <br /> {{ person.location?.street }}
-            <br /> {{ person.location?.city }} <span *ngIf="person.location?.city">, </span> {{person.location?.state}} {{ person.location?.postcode }}
+            <br /> {{ person.location?.city }}, {{person.location?.state}} {{ person.location?.postcode }}
           </li>
           <li class="list-group-item">Email: {{ person.email }}</li>
           <li class="list-group-item">Gender: {{ person.gender }}</li>

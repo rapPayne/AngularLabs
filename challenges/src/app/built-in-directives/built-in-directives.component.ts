@@ -6,7 +6,7 @@ import { people } from './listOfPeople';
   templateUrl: './people-list.component.html',
   styleUrls: ['./people-list.component.css']
 })
-export class PeopleListComponent implements OnInit {
+export class BuiltInDirectivesComponent implements OnInit {
 
   private people;
 
@@ -14,7 +14,6 @@ export class PeopleListComponent implements OnInit {
 
   ngOnInit() {
     this.people = people;
-    console.log(this.people[0]);
   }
 
 }
