@@ -1,0 +1,4 @@
+<h1>All the people</h1>
+<div class="person-list">
+  <demo-person [person]="person" (delete)="deletePerson($event)" *ngFor="let person of people"></demo-person>
+</div>

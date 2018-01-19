@@ -1,0 +1,11 @@
+.person-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.person-card {
+  margin: 10px;
+}
+.form-control-feedback {
+  transform-origin: center 40%;
+  transform: scale(4);
+}
