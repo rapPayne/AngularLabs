@@ -8,21 +8,17 @@ import { SolutionsModule } from './solutions/solutions.module';
 //import { solutionsRouter } from './solutions/solutions.router';
 
 import { AppComponent } from './app.component';
-import { FormsDemoComponent } from './forms-demo/forms-demo.component';
-import { ObservableComponent } from './observable/observable.component';
 import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
-import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
+import { PeopleListComponent } from './demonstrations/people-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormsDemoComponent,
-    ObservableComponent,
     WelcomeComponent,
     NotFoundComponent,
-    BuiltInDirectivesComponent,
+    PeopleListComponent,
   ],
   imports: [
     BrowserModule,
