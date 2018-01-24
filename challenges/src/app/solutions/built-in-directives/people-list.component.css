@@ -1,0 +1,9 @@
+.person-list { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+}
+.person-list > section { margin: 20px; }
+.form-control-feedback {
+  transform-origin: center 40%;
+  transform: scale(4);
+}
