@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { solutionsRouter } from "./solutions.router";
 import { LazyLoadingMainModule } from './lazyloading/lazy-loading-main.module';
 
-import { BuiltInDirectivesComponent } from './built-in-directives/built-in-directives.component';
 import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
 import { ObservableComponent } from './observable/observable.component';
 import { FormsDemoComponent } from './forms-demo/forms-demo.component';
@@ -26,7 +25,6 @@ import { SSNValidatorDirective } from './custom-validator-directive/ssn-validato
     LazyLoadingMainModule
   ],
   declarations: [
-    BuiltInDirectivesComponent,
     FormsDemoComponent,
     PeopleListComponent,
     PersonComponent,
