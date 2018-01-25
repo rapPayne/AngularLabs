@@ -10,16 +10,14 @@ export class PersonComponent implements OnInit {
   person;
 
   @Output()
-  delete = new EventEmitter();
+  onDelete = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  deleteMe(user) {
-    console.log("deleteme ", user);
-    this.delete.emit(user);
+  deletePerson(person) {
+    this.onDelete.emit(person);
   }
-
 }
