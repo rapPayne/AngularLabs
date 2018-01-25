@@ -7,7 +7,6 @@ import { LazyLoadingMainModule } from './lazyloading/lazy-loading-main.module';
 
 import { AjaxPeopleListComponent } from './ajax/ajax-people-list.component';
 import { ObservableComponent } from './observable/observable.component';
-import { FormsDemoComponent } from './forms-demo/forms-demo.component';
 import { PeopleListComponent } from './composition/people-list.component';
 import { PersonComponent } from './composition/person.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
@@ -25,7 +24,6 @@ import { SSNValidatorDirective } from './custom-validator-directive/ssn-validato
     LazyLoadingMainModule
   ],
   declarations: [
-    FormsDemoComponent,
     PeopleListComponent,
     PersonComponent,
     AjaxPeopleListComponent,
