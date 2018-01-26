@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import 'rxjs/add/operator/takeWhile';
 
 @Component({
   selector: 'demo-observable',
@@ -9,32 +10,45 @@ import { Observable } from 'rxjs';
 export class ObservableComponent implements OnInit {
   numbers = [];
   nextNumber = 0;
-  observable;
+  observable$;
   subscription;
+  running: boolean;
+  timerId;
 
   constructor() { }
 
   ngOnInit() {
-    this.observable = Observable.create(
+    this.observable$ = Observable.create(
       obs => {
-        console.log("Observable is created");
-        setInterval(() => {
+        this.timerId = setInterval(() => {
           this.nextNumber++;
           obs.next(this.nextNumber);
-        }, 2000);
+        }, 1000);
+        console.log("Observable is created",this.timerId);
       }
     );
   }
 
-  runTheObservable() {
-    this.subscription = this.observable
-    .subscribe((number) => {
-      this.numbers.unshift(number);
-    });
+  startTheObservable() {
+    this.running = true;
+    this.subscription = this.observable$
+      .takeWhile((number) => this.running)
+      .subscribe((number) => {
+        this.numbers.unshift(number);
+      })
+      .add(() => clearInterval(this.timerId));
   }
 
   //Unsubscribe doesn't stop the observable from running, it just makes us stop listening to it.
   pauseTheObservable() {
     this.subscription.unsubscribe();
+  }
+
+  restartTheObservable() {
+    console.log('restarting');
+  }
+
+  stopTheObservable() {
+    this.running = false;
   }
 }
