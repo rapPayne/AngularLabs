@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome.component';
 import { NotFoundComponent } from './not-found.component';
 import { LazyLoadingMainModule } from './solutions/lazyloading/lazy-loading-main.module';
 import { PeopleListComponent } from './demonstrations/people-list.component';
+import { PersonComponent } from './demonstrations/person.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PeopleListComponent } from './demonstrations/people-list.component';
     WelcomeComponent,
     NotFoundComponent,
     PeopleListComponent,
+    PersonComponent,
   ],
   imports: [
     BrowserModule,
