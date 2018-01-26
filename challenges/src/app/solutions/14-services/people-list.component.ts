@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { people } from './listOfPeople';
 import { PeopleService } from './people.service';
 
 @Component({
