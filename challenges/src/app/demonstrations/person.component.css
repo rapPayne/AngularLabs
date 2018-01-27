@@ -1,0 +1,9 @@
+
+.person-card { margin: 20px; }
+.form-control-feedback {
+  transform-origin: center 40%;
+  transform: scale(4);
+}
+.clickable {
+  cursor: pointer;
+}
