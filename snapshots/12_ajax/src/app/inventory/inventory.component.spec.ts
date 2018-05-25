@@ -19,7 +19,13 @@ describe('InventoryComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('will work well', () => {
+    // do stuff here
+    const foo = {};
+    expect(foo).toBeTruthy();
+  })
 });

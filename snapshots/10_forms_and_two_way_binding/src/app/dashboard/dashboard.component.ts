@@ -7,7 +7,7 @@ import { Order } from '../shared/Order';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  orders;
+  orders=[];
   constructor() { }
 
   ngOnInit() {

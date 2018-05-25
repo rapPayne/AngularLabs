@@ -1,9 +1,8 @@
-export class Product
-{
-    productID: number;
-    name: string;
-    description: string;
-    price: number;
-    imageUrl: string;
-    featured: boolean;
+export class Product {
+  productID: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  featured: boolean;
 }

@@ -8,7 +8,7 @@ import { ListOfOrdersComponent } from '../shipping/list-of-orders.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  orders;
+  orders=[];
   constructor() { }
 
   ngOnInit() {
