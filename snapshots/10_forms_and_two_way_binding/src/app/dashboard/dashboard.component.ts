@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from '../shared/Order';
 
 @Component({
   selector: 'nw-dashboard',

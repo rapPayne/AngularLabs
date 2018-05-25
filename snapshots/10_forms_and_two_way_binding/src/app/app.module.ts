@@ -18,7 +18,7 @@ import { routing } from './app.router';
     InventoryComponent,
     ReceiveProductComponent,
     ShipOrderComponent,
-    OrdersToShipComponent
+    OrdersToShipComponent,
   ],
   imports: [
     BrowserModule,
