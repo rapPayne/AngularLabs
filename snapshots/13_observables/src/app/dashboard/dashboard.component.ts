@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Order } from '../shared/Order';
-import 'rxjs/add/operator/toPromise';
+import { ListOfOrdersComponent } from '../shipping/list-of-orders.component';
 
 @Component({
   selector: 'nw-dashboard',
@@ -9,21 +9,20 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  orders=[];
+  constructor(private _http: HttpClient) { }
 
-    private orders:Order[] = new Array<Order>();
+  ngOnInit() {
+    this.getOrdersReadyToShip();
+  }
 
-    constructor(private _http:Http)
-    {
-	this.getOrdersReadyToShip();
-    }
-
-    getOrdersReadyToShip()
-    {
-	this._http.get('/api/orders/readyToShip')
-	    .toPromise()
-	    .then((response) => { this.orders = response.json(); });
-    }
-
-    ngOnInit() {
-    }
+  getOrdersReadyToShip() {
+    this._http
+      .get<any[]>("/api/orders/readyToShip")
+      .toPromise()
+      .then(
+        res => this.orders = res,
+        err => console.error("Problem loading orders", err)
+      )
+  }
 }

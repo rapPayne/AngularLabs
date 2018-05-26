@@ -1,29 +1,26 @@
-<div class="alert" [ngClass]="{'alert-success': order.status === 0, 'alert-danger': order.status !== 0}">
-  Order status: {{order.status}}
+<div class="alert" [ngClass]="{'alert-success':order.status === 0,'alert-danger':order.status !== 0}">
+  Order status: Ready to ship
 </div>
-<div class="alert" [ngClass]="{'alert-info': order.status !==2, 'alert-danger': order.status === 2}">
-  <div [ngSwitch]="order.status">
-    <h3>Instructions</h3>
-    <ol *ngSwitchCase="0">
-      <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
-      <li>Pick the items and check the <i>Got it</i> box.</li>
-      <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
-    </ol>
-    <p *ngSwitchCase="1">This order has already shipped.  Do not pick it!</p>
-    <p *ngSwitchCase="2">Do not pick this order.  A supervisor needs to review it.</p>
-    <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
-  </div>
+<div class="alert" [ngClass]="{'alert-info':order.status !== 2,'alert-danger':order.status === 2}">
+  <p *ngIf="order.status === 2">{{ instructions }}</p>
+  <h3>Instructions</h3>
+  <ol>
+    <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
+    <li>Pick the items and check the <i>Got it</i> box.</li>
+    <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+  </ol>
+  <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
 </div>
 <section id="orderInfo">
   <ul class="list-group">
     <li class="list-group-item">
-      Order number: {{order.orderID}}
+      Order number: {{ order.orderID }}
     </li>
     <li class="list-group-item">
-      Order date: {{order.orderDate}}
+      Order date: {{ order.orderDate }}
     </li>
     <li class="list-group-item">
-      Ship via: {{order.shipVia}}
+      Ship via: {{ order.shipVia }}
     </li>
   </ul>
 </section>
@@ -40,12 +37,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let line of order.lines">
-	<ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button></ng-template>
-        <td><input type="checkbox" name="picked" [(ngModel)]="line.picked" class="big-checkbox" ></td>
-	<td><span *ngIf="line.locationID ; else getLocationButton">{{line.locationID}}</span></td>
-        <td>{{line.productID}}</td>
-        <td><img src="{{line.product.imageUrl}}"></td>
-        <td>{{line.quantity}}</td>
+        <ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button></ng-template>
+        <td><input type="checkbox" name="picked" [(ngModel)]="line.picked" class="big-checkbox"></td>
+        <td><span *ngIf="line.locationID ; else getLocationButton">{{ line.locationID }}</span></td>
+        <td>{{ line.productID }}</td>
+        <td><img src="/assets/images/productImages/{{ line.productID }}.jpg"></td>
+        <td>{{ line.quantity }}</td>
       </tr>
     </tbody>
   </table>
@@ -57,9 +54,9 @@
 <section id="shippingLabel">
   <h3>Shipping Label</h3>
   <pre>
-    {{order.shipName}}
-    {{order.shipAddress}}
-    {{order.shipCity}}, {{order.shipRegion}} {{order.shipPostalCode}}
-    {{order.shipCountry}}
-    </pre>
+      {{ order.shipName }}
+      {{ order.shipAddress }}
+      {{ order.shipCity }}, {{ order.shipRegion }} {{ order.shipPostalCode }}
+      {{ order.shipCountry }}
+      </pre>
 </section>

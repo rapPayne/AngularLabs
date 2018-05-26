@@ -1,5 +1,5 @@
 import { RouterModule } from "@angular/router";
-
+import { AppComponent } from "./app.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { OrdersToShipComponent } from "./shipping/orders-to-ship.component";
 import { ShipOrderComponent } from "./shipping/ship-order.component";

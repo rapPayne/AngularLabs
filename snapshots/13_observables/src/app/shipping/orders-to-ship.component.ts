@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import { Order } from '../shared/Order';
-import 'rxjs/add/operator/toPromise';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'nw-orders-to-ship',
@@ -9,20 +7,20 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: ['./orders-to-ship.component.css']
 })
 export class OrdersToShipComponent implements OnInit {
-    private orders:Order[] = new Array<Order>();
+  orders;
+  constructor(private _http: HttpClient) { }
 
-    constructor(private _http:Http)
-    {
-	this.getOrdersReadyToShip();
-    }
+  ngOnInit() {
+    this.getOrdersReadyToShip();
+  }
 
-    getOrdersReadyToShip()
-    {
-	this._http.get('/api/orders/readyToShip')
-	    .toPromise()
-	    .then((response) => { this.orders = response.json(); });
-    }
-
-    ngOnInit() {
-    }
+  getOrdersReadyToShip() {
+    this._http
+      .get("/api/orders/readyToShip")
+      .toPromise()
+      .then(
+        res => this.orders = res,
+        err => console.error("Problem loading orders", err)
+      )
+  }
 }
