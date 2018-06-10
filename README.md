@@ -1,5 +1,7 @@
 # Angular Labs
-Labs for the Angular Courses
+These are the lab exercises to support the Angular Courses. In these labs we will be creating a full-blown warehouse management system. They are designed to simulate a real-world web application so your classroom experience matches more closely with how you will use Angular in the real world.
+
+By the time you're finished, you'll have an honest-to-goodness Node/Express web server with a mongoDB database behind it that serves RESTful JSON data that your Angular application will consume via Ajax requests with and without Observables in rxjs.
 
 ## Getting started
 1. [Setup](#setup)
@@ -30,7 +32,7 @@ npm start
 ```
 If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder.
 
-# About the warehouse
+# About the warehouse data
 We have products, locations, orders, and customers. They are stored in collections (aka tables) in a mongo database.
 
 ## Orders
