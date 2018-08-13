@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/takeWhile';
+
 
 @Component({
   selector: 'demo-observable',

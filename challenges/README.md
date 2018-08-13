@@ -1,18 +1,27 @@
-# Demos
+# Chall
 
-These are the class challenges and walkthroughs.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
 
-## To run them
-```
-cd challenges
-ng serve
-```
-Then browse to http://localhost:4200
+## Development server
 
-## How to do a challenge
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Read the challenge on the welcome page, examine the starters (for those that have starters), create any files needed through ng serve, and write the code to solve the challenge.
+## Code scaffolding
 
-Solutions can be surfed to by adding "solutions" in the url. Ex: http://localhost:4200/ajax becomes http://localhost:4200/solutions/ajax. And http://localhost:4200/observables becomes http://localhost:4200/solutions/observables.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-You probably don't want to git commit anything unless you've improved on a solution or starter. The work in progress should be deleted after each class. To do that, go git checkout -- filename(s) (ie. git checkout -- challenges) or if they're all to be ignored, go git reset --hard. Be careful with that last one.
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
