@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { solutionsRouter } from "./solutions.router";
 import { LazyLoadingMainModule } from './lazyloading/lazy-loading-main.module';
 
-import { ObservableComponent } from './observable/observable.component';
+import { ObservableComponent } from './13-observables/observable.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
 import { BorderHoverDirective } from './custom-directives/border-hover.directive';

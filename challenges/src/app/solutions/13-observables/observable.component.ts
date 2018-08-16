@@ -32,19 +32,23 @@ export class ObservableComponent implements OnInit {
   startTheObservable() {
     this.running = true;
     this.subscription = this.observable$
-      .takeWhile((number) => this.running)
       .subscribe((number) => {
         this.numbers.unshift(number);
       })
+      // adds a teardown function to be called when unsubscribing
       .add(() => clearInterval(this.timerId));
   }
 
   //Unsubscribe doesn't stop the observable from running, it just makes us stop listening to it.
   pauseTheObservable() {
+    console.log("Pausing")
     this.subscription.unsubscribe();
   }
 
   restartTheObservable() {
+    this.observable$.subscribe((number) => {
+      this.numbers.unshift(number);
+    });
     console.log('restarting');
   }
 

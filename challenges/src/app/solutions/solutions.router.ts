@@ -1,5 +1,5 @@
 import { RouterModule } from '@angular/router';
-import { ObservableComponent } from './observable/observable.component';
+import { ObservableComponent } from './13-observables/observable.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
 import { QuerystringsComponent } from './querystrings/querystrings.component';
