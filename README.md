@@ -15,7 +15,7 @@ By the time you're finished, you'll have an honest-to-goodness Node/Express web 
 There are only four things needed for setup and to run the labs:
 1. bash
 1. node ^8.9 with npm
-1. The Angular cli (ng) ^1.7.4
+1. The Angular cli (ng) ^7
 1. mongoDB ^3.2
 
 If you want some installation help including verification steps, go [here](setup/Angular%20Class%20Setup.pdf) .
