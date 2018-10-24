@@ -1,0 +1,31 @@
+<p>
+  form-with-status works!
+</p>
+
+<section>
+  <table mat-table class="mat-elevation-z8">
+    <tr>
+      <th mat-header-cell>pristine</th>
+      <th mat-header-cell>untouched</th>
+      <th>valid</th>
+    </tr>
+    <tr>
+      <td>{{firstTR.pristine ? "pristine" : "dirty" }}</td>
+      <td>{{firstTR.untouched ? "untouched" : "touched"}}</td>
+      <td>{{firstTR.valid ? "valid" : "invalid"}}</td>
+    </tr>
+  </table>
+</section>
+<form name="r" #rTR="ngForm">
+  <div>
+    <label for="first">First</label>
+    <input [(ngModel)]="first" #firstTR="ngModel" id="first" name="first" required pattern="\w{2,}" autocomplete="off" />
+  </div>
+  <div>
+    <input type="submit" class="" value="Register" />
+    <input type="reset" value="reset" />
+  </div>
+</form>
+<button (click)="updateFirst()">Update first name synchronously</button>
+<button (click)="resetFirst(rTR)">Reset the form imperatively</button>
+<button (click)="makeFirstPristineAndUntouchedAgain(rTR)">Make first pristine and untouched again brute force</button>
