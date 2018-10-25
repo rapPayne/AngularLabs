@@ -1,0 +1,59 @@
+<h1>Very cool people</h1>
+<section class="person-list">
+    <section *ngFor="let person of people" class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ person.name.first }} {{ person.name.last }}
+          <span (click)="deletePerson(person)" class="pull-right clickable">&times;</span></h3>
+      </div>
+      <div class="panel-body row">
+        <div class="col-sm-3">
+          <img [src]="person.picture.large" alt="{{ person.name.first }} {{ person.name.last }}" class="img-responsive img-circle" />
+        </div>
+        <div class="col-sm-9">
+          <ul class="list-group">
+            <li class="list-group-item">Phone: {{ person.phone }}</li>
+            <li class="list-group-item">Address:
+              <br /> {{ person.location?.street }}
+              <br /> {{ person.location?.city }}
+              <span *ngIf="person.location">
+              , </span>
+              {{person.location?.state}} {{ person.location?.postcode }}
+            </li>
+            <li class="list-group-item">Email: {{ person.email }}</li>
+            <li class="list-group-item">Gender: {{ person.gender }}</li>
+          </ul>
+          <label><input [(ngModel)]="person.showEditUser" type="checkbox" /> Edit user</label>
+          <div *ngIf="person.showEditUser" class="well">
+            <p *ngIf="formTR.invalid" class="alert alert-danger">Fields marked with a * have errors.</p>
+            <form #formTR="ngForm">
+              <div class="form-group has-feedback" [ngClass]="{'has-error': firstTR.invalid && firstTR.touched, 'has-success': firstTR.valid && firstTR.touched}">
+                <label for="first" class="control-label">First</label>
+                <input name="first" [(ngModel)]="person.name.first" #firstTR="ngModel" id="first" required class="form-control" />
+                <span *ngIf="firstTR.invalid" class="form-control-feedback">*</span>
+                <span *ngIf="firstTR.errors?.required" class="help-block">First name is required</span>
+              </div>
+              <div class="form-group has-feedback" [ngClass]="{'has-error': lastTR.invalid && lastTR.touched, 'has-success': lastTR.valid && lastTR.touched}">
+                <label for="last" class="control-label">Last</label>
+                <input name="last" [(ngModel)]="person.name.last" #lastTR="ngModel" id="last" required class="form-control" />
+                <span *ngIf="lastTR.invalid" class="form-control-feedback">*</span>
+                <span *ngIf="lastTR.errors?.required" class="help-block">Last name is required</span>
+              </div>
+              <div class="form-group has-feedback" [ngClass]="{'has-error': phoneTR.invalid && phoneTR.touched, 'has-success': phoneTR.valid && phoneTR.touched}">
+                <label for="phone" class="control-label">Phone</label>
+                <input name="phone" [(ngModel)]="person.phone" #phoneTR="ngModel" id="phone" class="form-control" />
+                <span *ngIf="phoneTR.invalid" class="form-control-feedback">*</span>
+              </div>
+              <div class="form-group has-feedback" [ngClass]="{'has-error': emailTR.invalid && emailTR.touched, 'has-success': emailTR.valid && emailTR.touched}">
+                <label for="email" class="control-label">Email</label>
+                <input name="email" [(ngModel)]="person.email" #emailTR="ngModel" id="email" required pattern="\w+@\w+\.\w{2,}" type="email" class="form-control" />
+                <span *ngIf="emailTR.invalid" class="form-control-feedback">*</span>
+                <div *ngIf="emailTR.touched && emailTR.errors?.required" class="help-block">email is required</div>
+                <div *ngIf="emailTR.touched && emailTR.errors?.pattern" class="help-block">That's not an email addy, yo.</div>
+              </div>
+              <input type="submit" value="Save changes" [disabled]="formTR.invalid" class="btn btn-primary" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>

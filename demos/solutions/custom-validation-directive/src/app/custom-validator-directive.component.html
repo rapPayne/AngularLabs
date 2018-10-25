@@ -1,0 +1,37 @@
+<section class="jumbotron">
+  <h1>
+    Registration
+  </h1>
+  <div class="alert alert-info">
+    In order to use our service, we'll need your name and social security number. Please enter them below.
+  </div>
+</section>
+
+<form (ngSubmit)="processNameAndSSN()" >
+
+  <div class="form-group has-feedback">
+    <label for="givenName" class="control-label">Given name</label>
+
+    <input [(ngModel)]="givenName" #givenNameTR="ngModel" 
+    name="givenName" id="givenName" minlength="4" maxlength="10" 
+    required class="form-control" />
+    
+    <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.invalid" class="form-control-feedback">*</span>
+    <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.errors.required" class="help-block">First name is required</span>
+    <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.errors.minlength" class="help-block">I need more characters</span>
+    <span *ngIf="givenNameTR.touched && givenNameTR.errors && givenNameTR.errors.maxlength" class="help-block">Oops, your name is too long</span>
+  </div>
+
+  <div class="form-group has-feedback">
+    <label for="ssn" class="control-label">Social Security number</label>
+    <input #ssnTR="ngModel" social-security-number [(ngModel)]="ssn" name="ssn" required pattern="^\d{3}-\d{2}-\d{4}$" class="form-control" />
+    <span *ngIf="ssnTR.valid" class="form-control-feedback">*</span>
+    <span *ngIf="ssnTR.errors?.required" class="help-block">We need your SSN to proceed</span>
+    <span *ngIf="ssnTR.errors?.ssn" class="help-block">That doesn't look like a SSN</span>
+  </div>
+
+  <div>
+    <input type="submit" class="btn btn-primary btn-lg" value="Go >>" />
+  </div>
+  {{ givenName }} {{ ssn }}
+</form>

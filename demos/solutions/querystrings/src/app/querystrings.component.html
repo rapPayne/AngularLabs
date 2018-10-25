@@ -1,0 +1,19 @@
+<h1>
+  Lots o' people
+</h1>
+<div *ngFor="let person of people" class="panel panel-primary ">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ person.name.first }} {{ person.name.last }}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-sm-2">
+      <img *ngIf="showPhoto" [src]="person.picture.large" alt="{{ person.name.first + ' ' + person.name.last}}" class="img-responsive" />
+    </div>
+    <div class="col-sm=10">
+      <ul>
+        <li *ngIf="showGender">{{ person.gender }}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>

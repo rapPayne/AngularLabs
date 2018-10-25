@@ -1,0 +1,5 @@
+<h1>
+  Very cool people</h1>
+<section class="person-list">
+  <demo-person *ngFor="let person of people" (onDelete)="deletePerson($event)" [person]="person"></demo-person>
+</section>
