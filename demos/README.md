@@ -1,6 +1,6 @@
 # Demonstrations (Demos)
 
-These are demos we can do together in class. Or you can do them on your own for just the ones you're interested in.
+We can run these demos together in class. Or you can do them on your own for just the ones you're interested in.
 
 You'll see these folders:
 
@@ -24,7 +24,7 @@ Then you can edit the code in that folder.
 
 ## If you want to keep the starter pristine
 
-Copy everything from the starter to the `current` folder and edit the code there. Again, to run it, you'll just ...
+Copy everything from the `starter` to the `current` folder and edit the code there. Do something like this ...
 
 ```Shell
 $ cd <pathToCurrentFolder> 
