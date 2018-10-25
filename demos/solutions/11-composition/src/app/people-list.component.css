@@ -1,3 +1,8 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap-reboot.css";
+@import "~bootstrap/dist/css/bootstrap-grid.css";
+
 .person-list { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -10,3 +15,4 @@
 .clickable {
   cursor: pointer;
 }
+

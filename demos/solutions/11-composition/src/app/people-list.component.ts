@@ -5,6 +5,7 @@ import { people } from './listOfPeople';
   selector: 'demo-people-list',
   templateUrl: './people-list.component.html',
   styleUrls: ['./people-list.component.css']
+  
 })
 export class PeopleListComponent implements OnInit {
   people:Array<any>;
