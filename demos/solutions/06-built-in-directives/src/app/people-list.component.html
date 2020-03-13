@@ -1,24 +1,23 @@
-<p>
-  people-list works!
-</p>
-<p *ngFor="let p of people">
-  <ng-template #fullname>
-    {{ p.name.first }} {{ p.name.last }}
-  </ng-template>
-  <ng-container *ngIf="p.name.first !== 'James'">
-    <ng-container *ngTemplateOutlet="fullname">Foo</ng-container>
-  </ng-container>
-</p>
-<h1>Very cool people</h1>
+
+<h1>
+  All the cool people!
+</h1>
+
+<label>New person</label>
+<input #firstNameTR />
+<button (click)="AddPerson(firstNameTR.value)">Add person</button>
+<div *ngFor="let person of people">
+  {{ person.name.first }}
+</div>
+
 <section class="person-list">
-  <section *ngFor="let person of people" class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{ person.name.first }} {{ person.name.last }} </h3>
+  <section *ngFor="let person of people" class="card">
+    <div class="card-header">
+      <h3 class="card-title">{{ person.name.first }} {{ person.name.last }} </h3>
     </div>
-    <div class="panel-body row">
+    <div class="card-body row">
       <div class="col-sm-3">
-        <img [src]="person.picture.large" alt="{{ person.name.first }} {{ person.name.last }}" class="img-responsive img-circle"
-        />
+        <img [src]="person.picture.large" alt="{{ person.name.first }}" class="img-fluid rounded-circle" />
       </div>
       <div class="col-sm-9">
         <ul class="list-group">
@@ -36,4 +35,3 @@
       </div>
     </div>
   </section>
-</section>

@@ -7,3 +7,8 @@
   transform-origin: center 40%;
   transform: scale(4);
 }
+@media(max-width:576px) {
+  .person-list {
+    display: block;
+  }
+}
