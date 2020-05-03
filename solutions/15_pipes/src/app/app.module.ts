@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -32,7 +32,7 @@ import { ShipViaPipe } from './ship-via.pipe';
     ShipViaPipe,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule, routing
+    BrowserModule, FormsModule, HttpClientModule, routing
   ],
   providers: [LoginService, OrdersRepositoryService],
   bootstrap: [AppComponent]
