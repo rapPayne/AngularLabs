@@ -4,7 +4,8 @@ typings
 **/app/**/*.map
 node_modules
 npm-debug.log
-warehouse/dist
+warehouse
+tocopy
 jspm_packages
 bower_components
 99_final
