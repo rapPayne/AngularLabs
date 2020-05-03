@@ -1,0 +1,24 @@
+.order-list .header-row {
+  font-weight: bold;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  line-height: 1.43;
+}
+
+.order-list .header-row div {
+  box-sizing: border-box;
+  display: table-cell;
+}
+
+.order-list .order-row  {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.order-list .order-row:nth-child(2n) {
+  background-color: rgb(249,249,249);
+}
+
+.order-list .order-row:hover {
+  background-color: rgb(245, 245, 245);
+}

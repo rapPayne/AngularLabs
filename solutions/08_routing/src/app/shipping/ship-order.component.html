@@ -1,0 +1,61 @@
+<div class="alert" [ngClass]="{'alert-success':order.status === 0,'alert-danger':order.status !== 0}">
+  Order status: Ready to ship
+</div>
+<div class="alert" [ngClass]="{'alert-info':order.status !== 2,'alert-danger':order.status === 2}">
+  <h3>Instructions</h3>
+  <ol>
+    <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
+    <li>Pick the items and check the <i>Got it</i> box.</li>
+    <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+  </ol>
+  <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+</div>
+<section id="orderInfo">
+  <ul class="list-group">
+    <li class="list-group-item">
+      Order number: {{ order.orderID }}
+    </li>
+    <li class="list-group-item">
+      Order date: {{ order.orderDate }}
+    </li>
+    <li class="list-group-item">
+      Ship via: {{ order.shipVia }}
+    </li>
+  </ul>
+</section>
+<section id="orderLines">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Got it!</th>
+        <th>Location</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of order.lines">
+        <ng-template #getLocationButton><button class="btn">Get best location</button></ng-template>
+        <td><input type="checkbox" class="big-checkbox"></td>
+        <td><span *ngIf="line.locationID ; else getLocationButton">{{ line.locationID }}</span></td>
+        <td>{{ line.productID }}</td>
+        <td><img src="/assets/images/productImages/{{ line.productID }}.jpg"></td>
+        <td>{{ line.quantity }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="markAsShipped">
+  <button class="btn btn-lg btn-primary" [disabled]="!isReadyToShip(order)">Mark as shipped</button>
+  <button class="btn btn-lg btn-danger">Problem</button>
+</section>
+<section id="shippingLabel">
+  <h3>Shipping Label</h3>
+  <pre>
+      {{ order.shipName }}
+      {{ order.shipAddress }}
+      {{ order.shipCity }}, {{ order.shipRegion }} {{ order.shipPostalCode }}
+      {{ order.shipCountry }}
+      </pre>
+</section>
