@@ -1,4 +1,6 @@
 {
+  "products": [
+  {
   "_id": {
     "$oid": "585d938d61abd85fd1457459"
   },
@@ -8,7 +10,7 @@
   "description": "24 - 12 oz bottles",
   "price": 19.0,
   "imageUrl": "/assets/images/productImages/2.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745a"
@@ -19,7 +21,7 @@
   "description": "12 - 550 ml bottles",
   "price": 10.0,
   "imageUrl": "/assets/images/productImages/3.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745b"
@@ -30,7 +32,7 @@
   "description": "10 boxes x 20 bags",
   "price": 18.0,
   "imageUrl": "/assets/images/productImages/1.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745c"
@@ -42,7 +44,7 @@
   "description": "36 boxes",
   "price": 21.35,
   "imageUrl": "/assets/images/productImages/5.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745d"
@@ -53,7 +55,7 @@
   "description": "12 - 8 oz jars",
   "price": 25.0,
   "imageUrl": "/assets/images/productImages/6.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745e"
@@ -64,7 +66,7 @@
   "description": "12 - 1 lb pkgs.",
   "price": 30.0,
   "imageUrl": "/assets/images/productImages/7.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145745f"
@@ -75,7 +77,7 @@
   "description": "12 - 12 oz jars",
   "price": 40.0,
   "imageUrl": "/assets/images/productImages/8.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457460"
@@ -86,7 +88,7 @@
   "description": "48 - 6 oz jars",
   "price": 22.0,
   "imageUrl": "/assets/images/productImages/4.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457461"
@@ -97,7 +99,7 @@
   "description": "18 - 500 g pkgs.",
   "price": 97.0,
   "imageUrl": "/assets/images/productImages/9.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457462"
@@ -108,7 +110,7 @@
   "description": "12 - 200 ml jars",
   "price": 31.0,
   "imageUrl": "/assets/images/productImages/10.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457463"
@@ -119,7 +121,7 @@
   "description": "1 kg pkg.",
   "price": 21.0,
   "imageUrl": "/assets/images/productImages/11.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457464"
@@ -130,7 +132,7 @@
   "description": "10 - 500 g pkgs.",
   "price": 38.0,
   "imageUrl": "/assets/images/productImages/12.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457465"
@@ -141,7 +143,7 @@
   "description": "2 kg box",
   "price": 6.0,
   "imageUrl": "/assets/images/productImages/13.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457466"
@@ -152,7 +154,7 @@
   "description": "40 - 100 g pkgs.",
   "price": 23.25,
   "imageUrl": "/assets/images/productImages/14.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457467"
@@ -163,7 +165,7 @@
   "description": "24 - 250 ml bottles",
   "price": 15.5,
   "imageUrl": "/assets/images/productImages/15.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457468"
@@ -174,7 +176,7 @@
   "description": "32 - 500 g boxes",
   "price": 17.45,
   "imageUrl": "/assets/images/productImages/16.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457469"
@@ -185,7 +187,7 @@
   "description": "20 - 1 kg tins",
   "price": 39.0,
   "imageUrl": "/assets/images/productImages/17.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746a"
@@ -196,7 +198,7 @@
   "description": "16 kg pkg.",
   "price": 62.5,
   "imageUrl": "/assets/images/productImages/18.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746b"
@@ -207,7 +209,7 @@
   "description": "10 boxes x 12 pieces",
   "price": 9.2,
   "imageUrl": "/assets/images/productImages/19.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746c"
@@ -219,7 +221,7 @@
   "description": "30 gift boxes",
   "price": 81.0,
   "imageUrl": "/assets/images/productImages/20.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746d"
@@ -230,7 +232,7 @@
   "description": "24 pkgs. x 4 pieces",
   "price": 10.0,
   "imageUrl": "/assets/images/productImages/21.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746e"
@@ -241,7 +243,7 @@
   "description": "24 - 500 g pkgs.",
   "price": 21.0,
   "imageUrl": "/assets/images/productImages/22.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145746f"
@@ -252,7 +254,7 @@
   "description": "12 - 250 g pkgs.",
   "price": 9.0,
   "imageUrl": "/assets/images/productImages/23.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457470"
@@ -263,7 +265,7 @@
   "description": "12 - 355 ml cans",
   "price": 4.5,
   "imageUrl": "/assets/images/productImages/24.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457471"
@@ -274,7 +276,7 @@
   "description": "20 - 450 g glasses",
   "price": 14.0,
   "imageUrl": "/assets/images/productImages/25.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457472"
@@ -285,7 +287,7 @@
   "description": "100 - 250 g bags",
   "price": 31.23,
   "imageUrl": "/assets/images/productImages/26.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457473"
@@ -296,7 +298,7 @@
   "description": "100 - 100 g pieces",
   "price": 43.9,
   "imageUrl": "/assets/images/productImages/27.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457474"
@@ -307,7 +309,7 @@
   "description": "25 - 825 g cans",
   "price": 45.6,
   "imageUrl": "/assets/images/productImages/28.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457475"
@@ -318,7 +320,7 @@
   "description": "50 bags x 30 sausages.",
   "price": 123.79,
   "imageUrl": "/assets/images/productImages/29.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457476"
@@ -329,7 +331,7 @@
   "description": "10 - 200 g glasses",
   "price": 25.89,
   "imageUrl": "/assets/images/productImages/30.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457477"
@@ -340,7 +342,7 @@
   "description": "12 - 100 g pkgs",
   "price": 12.5,
   "imageUrl": "/assets/images/productImages/31.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457478"
@@ -351,7 +353,7 @@
   "description": "24 - 200 g pkgs.",
   "price": 32.0,
   "imageUrl": "/assets/images/productImages/32.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457479"
@@ -362,7 +364,7 @@
   "description": "500 g",
   "price": 2.5,
   "imageUrl": "/assets/images/productImages/33.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747a"
@@ -373,7 +375,7 @@
   "description": "24 - 12 oz bottles",
   "price": 14.0,
   "imageUrl": "/assets/images/productImages/34.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747b"
@@ -384,7 +386,7 @@
   "description": "24 - 12 oz bottles",
   "price": 18.0,
   "imageUrl": "/assets/images/productImages/35.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747c"
@@ -395,7 +397,7 @@
   "description": "24 - 250 g  jars",
   "price": 19.0,
   "imageUrl": "/assets/images/productImages/36.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747d"
@@ -406,7 +408,7 @@
   "description": "12 - 500 g pkgs.",
   "price": 26.0,
   "imageUrl": "/assets/images/productImages/37.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747e"
@@ -417,7 +419,7 @@
   "description": "12 - 75 cl bottles",
   "price": 263.5,
   "imageUrl": "/assets/images/productImages/38.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145747f"
@@ -428,7 +430,7 @@
   "description": "750 cc per bottle",
   "price": 18.0,
   "imageUrl": "/assets/images/productImages/39.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457480"
@@ -439,7 +441,7 @@
   "description": "24 - 4 oz tins",
   "price": 18.4,
   "imageUrl": "/assets/images/productImages/40.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457481"
@@ -450,7 +452,7 @@
   "description": "12 - 12 oz cans",
   "price": 9.65,
   "imageUrl": "/assets/images/productImages/41.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457482"
@@ -461,7 +463,7 @@
   "description": "32 - 1 kg pkgs.",
   "price": 14.0,
   "imageUrl": "/assets/images/productImages/42.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457483"
@@ -472,7 +474,7 @@
   "description": "16 - 500 g tins",
   "price": 46.0,
   "imageUrl": "/assets/images/productImages/43.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457484"
@@ -483,7 +485,7 @@
   "description": "20 - 2 kg bags",
   "price": 19.45,
   "imageUrl": "/assets/images/productImages/44.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457485"
@@ -494,7 +496,7 @@
   "description": "1k pkg.",
   "price": 9.5,
   "imageUrl": "/assets/images/productImages/45.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457486"
@@ -505,7 +507,7 @@
   "description": "4 - 450 g glasses",
   "price": 12.0,
   "imageUrl": "/assets/images/productImages/46.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457487"
@@ -516,7 +518,7 @@
   "description": "10 - 4 oz boxes",
   "price": 9.5,
   "imageUrl": "/assets/images/productImages/47.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457488"
@@ -527,7 +529,7 @@
   "description": "10 pkgs.",
   "price": 12.75,
   "imageUrl": "/assets/images/productImages/48.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457489"
@@ -538,7 +540,7 @@
   "description": "24 - 50 g pkgs.",
   "price": 20.0,
   "imageUrl": "/assets/images/productImages/49.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748a"
@@ -549,7 +551,7 @@
   "description": "12 - 100 g bars",
   "price": 16.25,
   "imageUrl": "/assets/images/productImages/50.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748b"
@@ -560,7 +562,7 @@
   "description": "50 - 300 g pkgs.",
   "price": 53.0,
   "imageUrl": "/assets/images/productImages/51.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748c"
@@ -571,7 +573,7 @@
   "description": "16 - 2 kg boxes",
   "price": 7.0,
   "imageUrl": "/assets/images/productImages/52.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748d"
@@ -582,7 +584,7 @@
   "description": "16 pies",
   "price": 7.45,
   "imageUrl": "/assets/images/productImages/54.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748e"
@@ -593,7 +595,7 @@
   "description": "48 pieces",
   "price": 32.8,
   "imageUrl": "/assets/images/productImages/53.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145748f"
@@ -604,7 +606,7 @@
   "description": "24 boxes x 2 pies",
   "price": 24.0,
   "imageUrl": "/assets/images/productImages/55.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457490"
@@ -615,7 +617,7 @@
   "description": "24 - 250 g pkgs.",
   "price": 38.0,
   "imageUrl": "/assets/images/productImages/56.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457491"
@@ -626,7 +628,7 @@
   "description": "24 - 250 g pkgs.",
   "price": 19.5,
   "imageUrl": "/assets/images/productImages/57.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457492"
@@ -638,7 +640,7 @@
   "description": "24 pieces",
   "price": 13.25,
   "imageUrl": "/assets/images/productImages/58.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457493"
@@ -649,7 +651,7 @@
   "description": "5 kg pkg.",
   "price": 55.0,
   "imageUrl": "/assets/images/productImages/59.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457494"
@@ -660,7 +662,7 @@
   "description": "15 - 300 g rounds",
   "price": 34.0,
   "imageUrl": "/assets/images/productImages/60.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457495"
@@ -671,7 +673,7 @@
   "description": "24 - 500 ml bottles",
   "price": 28.5,
   "imageUrl": "/assets/images/productImages/61.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457496"
@@ -682,7 +684,7 @@
   "description": "48 pies",
   "price": 49.3,
   "imageUrl": "/assets/images/productImages/62.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457497"
@@ -693,7 +695,7 @@
   "description": "15 - 625 g jars",
   "price": 43.9,
   "imageUrl": "/assets/images/productImages/63.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457498"
@@ -704,7 +706,7 @@
   "description": "20 bags x 4 pieces",
   "price": 33.25,
   "imageUrl": "/assets/images/productImages/64.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd1457499"
@@ -716,7 +718,7 @@
   "description": "32 - 8 oz bottles",
   "price": 21.05,
   "imageUrl": "/assets/images/productImages/65.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749a"
@@ -727,7 +729,7 @@
   "description": "24 - 8 oz jars",
   "price": 17.0,
   "imageUrl": "/assets/images/productImages/66.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749b"
@@ -738,7 +740,7 @@
   "description": "24 - 12 oz bottles",
   "price": 14.0,
   "imageUrl": "/assets/images/productImages/67.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749c"
@@ -749,7 +751,7 @@
   "description": "10 boxes x 8 pieces",
   "price": 12.5,
   "imageUrl": "/assets/images/productImages/68.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749d"
@@ -760,7 +762,7 @@
   "description": "10 kg pkg.",
   "price": 36.0,
   "imageUrl": "/assets/images/productImages/69.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749e"
@@ -772,7 +774,7 @@
   "description": "24 - 355 ml bottles",
   "price": 15.0,
   "imageUrl": "/assets/images/productImages/70.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd145749f"
@@ -783,7 +785,7 @@
   "description": "10 - 500 g pkgs.",
   "price": 21.5,
   "imageUrl": "/assets/images/productImages/71.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a0"
@@ -794,7 +796,7 @@
   "description": "24 - 150 g jars",
   "price": 15.0,
   "imageUrl": "/assets/images/productImages/73.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a1"
@@ -805,7 +807,7 @@
   "description": "24 - 200 g pkgs.",
   "price": 34.8,
   "imageUrl": "/assets/images/productImages/72.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a2"
@@ -816,7 +818,7 @@
   "description": "5 kg pkg.",
   "price": 10.0,
   "imageUrl": "/assets/images/productImages/74.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a3"
@@ -827,7 +829,7 @@
   "description": "24 - 0.5 l bottles",
   "price": 7.75,
   "imageUrl": "/assets/images/productImages/75.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a4"
@@ -838,7 +840,7 @@
   "description": "12 boxes",
   "price": 13.0,
   "imageUrl": "/assets/images/productImages/77.jpg"
-}
+},
 {
   "_id": {
     "$oid": "585d938d61abd85fd14574a5"
@@ -849,4 +851,6 @@
   "description": "500 ml",
   "price": 18.0,
   "imageUrl": "/assets/images/productImages/76.jpg"
+}
+  ]
 }
