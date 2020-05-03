@@ -11,6 +11,7 @@ export class ReceiveProductComponent implements OnInit {
   receivedProducts = [];
   productID;
   quantity;
+  trackingNumber; 
 
   constructor() { }
 
