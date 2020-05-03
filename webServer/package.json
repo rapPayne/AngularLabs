@@ -4,9 +4,10 @@
   "author": "Rap Payne",
   "description": "Labs for the Angular course",
   "scripts": {
-    "start": "nodemon warehouseServer.js",
-    "server": "json-server database.json"
+    "oldServer": "nodemon warehouseServer.js",
+    "start": "json-server database.json"
   },
+  "type": "module",
   "license": "GPL-3.0",
   "dependencies": {
     "body-parser": "^1.15.2",
