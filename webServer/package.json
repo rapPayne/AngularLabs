@@ -1,8 +1,8 @@
 {
-  "name": "angularlabs",
+  "name": "warehouse_data_server",
   "version": "1.0.0",
   "author": "Rap Payne",
-  "description": "Labs for the Angular course",
+  "description": "API data server for the Angular course labs",
   "scripts": {
     "oldServer": "nodemon warehouseServer.js",
     "start": "json-server database.json"
