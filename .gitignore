@@ -4,7 +4,6 @@ typings
 **/app/**/*.map
 node_modules
 npm-debug.log
-warehouse
 tocopy
 jspm_packages
 bower_components
