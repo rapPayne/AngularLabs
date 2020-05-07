@@ -10,7 +10,7 @@ import { Product } from '../shared/Product';
   styles: ['.big-checkbox { transform: scale(2) }', 'img {height:50px}']
 })
 export class ShipOrderComponent implements OnInit {
-  private order: Order;
+  public order: Order;
 
   constructor() { }
 
