@@ -1,5 +1,6 @@
 {
   "/api/*": "/$1",
+  "/locations/forProduct/:productID": "/locations?productID=:productID",
   "/orders/readyToShip": "/orders?status=0",
   "/products/featured": "/products?featured=true",
   "/products\\?search=:searchString": "/products?name_like=:searchString",
