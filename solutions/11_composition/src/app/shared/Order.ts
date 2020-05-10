@@ -6,7 +6,7 @@ export class Order {
   customerID: string
   status: number;
   orderDate: Date;
-  shipVia: string;
+  shipVia: number;
   shipping: number;
   tax: number;
   shipName: string;

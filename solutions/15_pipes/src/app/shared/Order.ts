@@ -1,8 +1,7 @@
 import { OrderLine } from './OrderLine';
 import { Customer } from './Customer';
 
-export class Order
-{
+export class Order {
     orderID: number;
     customerID: number;
     status: number;
