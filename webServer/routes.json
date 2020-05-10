@@ -4,5 +4,6 @@
   "/orders/readyToShip": "/orders?status=0",
   "/products/featured": "/products?featured=true",
   "/products\\?search=:searchString": "/products?name_like=:searchString",
-  "/orders/:id/markAsShipped": "/orders/:id"
+  "/orders/:id/markAsShipped": "/orders/:id",
+  "/orders/:id/markAsProblem": "/orders/:id"
 }
