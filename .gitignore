@@ -3,6 +3,7 @@ typings
 **/app/**/*.js
 **/app/**/*.map
 node_modules
+package-lock.json
 npm-debug.log
 warehouse
 tocopy
