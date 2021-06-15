@@ -1,12 +1,8 @@
-<p>
-  form-with-status works!
-</p>
-
 <section>
-  <table mat-table class="mat-elevation-z8">
+  <table class="mat-elevation-z8">
     <tr>
-      <th mat-header-cell>pristine</th>
-      <th mat-header-cell>untouched</th>
+      <th>pristine</th>
+      <th>untouched</th>
       <th>valid</th>
     </tr>
     <tr>
@@ -16,10 +12,11 @@
     </tr>
   </table>
 </section>
-<form name="r" #rTR="ngForm">
+<form name="r" #rTR ngForm>
   <div>
     <label for="first">First</label>
-    <input [(ngModel)]="first" #firstTR="ngModel" id="first" name="first" required pattern="\w{2,}" autocomplete="off" />
+    <input [(ngModel)]="first" #firstTR="ngModel" id="first" name="first" required pattern="\w{2,}"
+      autocomplete="off" />
   </div>
   <div>
     <input type="submit" class="" value="Register" />
