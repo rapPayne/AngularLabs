@@ -14,4 +14,4 @@ const routes = [
   {path: "", component: DashboardComponent},
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' });
