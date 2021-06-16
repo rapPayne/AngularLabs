@@ -11,7 +11,7 @@ import { Product } from '../shared/Product';
   styles: ['.big-checkbox { transform: scale(2) }', 'img {height:50px}']
 })
 export class ShipOrderComponent implements OnInit {
-  private order: Order;
+  public order: Order;
 
   constructor(private _route: ActivatedRoute) { }
 
@@ -21,7 +21,7 @@ export class ShipOrderComponent implements OnInit {
     this.order.orderID = orderID;
 
     this.order.orderDate = new Date();
-    this.order.shipVia = "GPS";
+    this.order.shipVia = 1;
     this.order.shipping = 10;
     this.order.shipName = "Ororo Monroe";
     this.order.shipAddress = "777 Placeholder Pl";
