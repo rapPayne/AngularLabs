@@ -14,7 +14,7 @@
   "dependencies": {
     "@angular/common": "^9.1.4",
     "@angular/compiler": "^9.1.4",
-    "@angular/core": "^9.1.4",
+    "@angular/core": "^12.0.4",
     "@angular/forms": "^9.1.4",
     "@angular/platform-browser": "^9.1.4",
     "@angular/platform-browser-dynamic": "^9.1.4",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.4",
-    "@angular/cli": "9.1.4",
+    "@angular/cli": "^12.0.4",
     "@angular/compiler-cli": "^9.1.4",
     "@types/jasmine": "2.5.38",
     "@types/node": "^12.11.1",
