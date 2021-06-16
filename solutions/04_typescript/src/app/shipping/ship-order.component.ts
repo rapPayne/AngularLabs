@@ -9,7 +9,7 @@ import { Product } from '../shared/Product';
   styleUrls: ['./ship-order.component.css']
 })
 export class ShipOrderComponent implements OnInit {
-  private order: Order;
+  private order?: Order;
 
   constructor() { }
 
