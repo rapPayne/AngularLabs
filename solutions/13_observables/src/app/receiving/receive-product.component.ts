@@ -11,6 +11,7 @@ export class ReceiveProductComponent implements OnInit {
   receivedProducts = [];
   productID;
   quantity;
+  trackingNumber;
 
   constructor() { }
 
@@ -23,7 +24,7 @@ export class ReceiveProductComponent implements OnInit {
   }
 
   receiveProduct(productID, quantity) {
-    this.receivedProducts.push({productID, quantity});
+    this.receivedProducts.push({ productID, quantity });
     this.productID = undefined;
     this.quantity = undefined;
   }

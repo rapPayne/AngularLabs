@@ -14,7 +14,7 @@ import { Location } from '../shared/Location';
   styles: ['.big-checkbox { transform: scale(2) }', 'img {height:50px}']
 })
 export class ShipOrderComponent implements OnInit {
-  private order: Order = new Order();
+  order: Order = new Order();
   instructions;
 
   constructor(private _route: ActivatedRoute, private _http: HttpClient) { }
@@ -35,25 +35,25 @@ export class ShipOrderComponent implements OnInit {
 
   getBestLocation(orderLine) {
     this._http
-    .get(`/api/locations/forProduct/${orderLine.productID}`)
-    .pipe(
-      map(res => <Array<Location>>res)
-    )
-    .subscribe(locations => orderLine.locationID = locations[0].locationID);
+      .get(`/api/locations/forProduct/${orderLine.productID}`)
+      .pipe(
+        map(res => <Array<Location>>res)
+      )
+      .subscribe(locations => orderLine.locationID = locations[0].locationID);
   }
 
   markAsShipped(order) {
     order.status = 1;
     this._http
-    .patch(`/api/orders/${order.orderID}/MarkAsShipped/`,{})
-    .subscribe();
+      .patch(`/api/orders/${order.orderID}/MarkAsShipped/`, {})
+      .subscribe();
   }
 
   markWithProblem(order) {
     order.status = 2;
     this.instructions = "Don't pick this order! It needs to be looked at by a supervisor.";
     this._http
-    .patch(`/api/orders/${order.orderID}/MarkAsProblem/`,{})
-    .subscribe();
+      .patch(`/api/orders/${order.orderID}/MarkAsProblem/`, {})
+      .subscribe();
   }
 }
