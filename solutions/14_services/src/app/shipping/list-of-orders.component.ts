@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { LoginService } from 'app/shared/login.service';
 
 @Component({
   selector: 'nw-list-of-orders',
@@ -7,12 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./list-of-orders.component.css']
 })
 export class ListOfOrdersComponent implements OnInit {
+  @Input()
+  orders;
 
-    @Input()
-    orders;
+  constructor() { }
 
-    constructor() { }
+  ngOnInit() {
+  }
 
-    ngOnInit() {
-    }
 }

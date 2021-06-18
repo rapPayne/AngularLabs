@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'app/shared/login.service';
 
 @Component({
   selector: 'nw-inventory',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent implements OnInit {
+  user;
 
-  constructor() { }
+  constructor(public _login: LoginService) { }
 
   ngOnInit() {
+    this.user = this._login.user;
   }
 
 }

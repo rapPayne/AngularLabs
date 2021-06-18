@@ -1,5 +1,5 @@
 import { RouterModule } from "@angular/router";
-
+import { AppComponent } from "./app.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { OrdersToShipComponent } from "./shipping/orders-to-ship.component";
 import { ShipOrderComponent } from "./shipping/ship-order.component";
@@ -8,12 +8,12 @@ import { InventoryComponent } from "./inventory/inventory.component";
 import { LoginComponent } from "./login/login.component";
 
 const routes = [
-  {path: "login", component: LoginComponent },
-  {path: "ship", component: OrdersToShipComponent},
-  {path: "ship/:orderID", component: ShipOrderComponent},
-  {path: "receive", component: ReceiveProductComponent},
-  {path: "inventory", component: InventoryComponent},
-  {path: "", component: DashboardComponent},
+  { path: "ship", component: OrdersToShipComponent },
+  { path: "ship/:orderID", component: ShipOrderComponent },
+  { path: "receive", component: ReceiveProductComponent },
+  { path: "inventory", component: InventoryComponent },
+  { path: "login", component: LoginComponent },
+  { path: "", component: DashboardComponent },
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' });

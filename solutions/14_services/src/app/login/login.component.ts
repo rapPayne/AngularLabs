@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../shared/User';
-import { LoginService } from '../services/login.service';
+import { LoginService } from 'app/shared/login.service';
 
 @Component({
   selector: 'nw-login',
@@ -8,24 +7,19 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-    private username:string;
-    private password:string;
-    private message:string = "Please login";
+  username: string;
+  password: string;
+  user?: { userid?: number, username?: string, password?: string, givenName?: string, familyName?: string };
+  message?: string;
 
-    login()
-    {
-	if (this.loginService.authenticate(this.username, this.password))
-	{
-	    this.message = "Successful login!  Welcome, " + this.loginService.user.firstName + " " + this.loginService.user.lastName;
-	}
-	else
-	{
-	    this.message = "Invalid login!";
-	}
-    }
+  constructor(private _loginService: LoginService) { }
 
-    constructor(private loginService:LoginService) { }
+  ngOnInit(): void {
+    this.user = this._loginService.user;
+  }
 
-    ngOnInit() {
-    }
+  login() {
+    this._loginService.authenticate();
+    this.message = `You're logged in, ${this.user?.givenName}.`;
+  }
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Order } from '../shared/Order';
-import { OrdersRepositoryService } from '../services/orders-repository.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { LoginService } from 'app/shared/login.service';
 
 @Component({
   selector: 'nw-orders-to-ship',
@@ -8,13 +8,22 @@ import { OrdersRepositoryService } from '../services/orders-repository.service';
   styleUrls: ['./orders-to-ship.component.css']
 })
 export class OrdersToShipComponent implements OnInit {
-    private orders:Order[] = new Array<Order>();
+  orders;
+  user;
+  constructor(private _http: HttpClient, public _login: LoginService) { }
 
-    constructor(private _ordersRepository:OrdersRepositoryService)
-    {
-	this._ordersRepository.getOrdersReadyToShip().then(orders => this.orders = orders);
-    }
+  ngOnInit() {
+    this.user = this._login.user;
+    this.getOrdersReadyToShip();
+  }
 
-    ngOnInit() {
-    }
+  getOrdersReadyToShip() {
+    this._http
+      .get("/api/orders/readyToShip")
+      .toPromise()
+      .then(
+        res => this.orders = res,
+        err => console.error("Problem loading orders", err)
+      )
+  }
 }
