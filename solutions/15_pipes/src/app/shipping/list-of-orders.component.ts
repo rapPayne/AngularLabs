@@ -8,11 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ListOfOrdersComponent implements OnInit {
 
-    @Input()
-    orders;
+  @Input()
+  orders;
 
-    constructor() { }
+  constructor() { }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 }

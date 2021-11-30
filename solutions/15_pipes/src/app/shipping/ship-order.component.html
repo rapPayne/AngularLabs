@@ -9,15 +9,15 @@
       <li>Pick the items and check the <i>Got it</i> box.</li>
       <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
     </ol>
-    <p *ngSwitchCase="1">This order has already shipped.  Do not pick it!</p>
-    <p *ngSwitchCase="2">Do not pick this order.  A supervisor needs to review it.</p>
+    <p *ngSwitchCase="1">This order has already shipped. Do not pick it!</p>
+    <p *ngSwitchCase="2">Do not pick this order. A supervisor needs to review it.</p>
     <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
   </div>
 </div>
 <section id="orderInfo">
   <ul class="list-group">
     <li class="list-group-item">
-      Order number: {{order.orderID}}
+      Order number: {{order.id}}
     </li>
     <li class="list-group-item">
       Order date: {{order.orderDate | date }}
@@ -40,9 +40,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let line of order.lines">
-	<ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button></ng-template>
-        <td><input type="checkbox" name="picked" [(ngModel)]="line.picked" class="big-checkbox" ></td>
-	<td><span *ngIf="line.locationID ; else getLocationButton">{{line.locationID | locationExpand }}</span></td>
+        <ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button>
+        </ng-template>
+        <td><input type="checkbox" name="picked" [(ngModel)]="line.picked" class="big-checkbox"></td>
+        <td><span *ngIf="line.locationID ; else getLocationButton">{{line.locationID | locationExpand }}</span></td>
         <td>{{line.productID}}</td>
         <td><img src="{{line.product.imageUrl}}"></td>
         <td>{{line.quantity}}</td>
@@ -51,7 +52,8 @@
   </table>
 </section>
 <section id="markAsShipped">
-  <button (click)="markAsShipped(order)" class="btn btn-lg btn-primary" [disabled]="!isReadyToShip(order)">Mark as shipped</button>
+  <button (click)="markAsShipped(order)" class="btn btn-lg btn-primary" [disabled]="!isReadyToShip(order)">Mark as
+    shipped</button>
   <button (click)="markWithProblem(order)" class="btn btn-lg btn-danger">Problem</button>
 </section>
 <section id="shippingLabel">
