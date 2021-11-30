@@ -2,9 +2,11 @@
   "name": "warehouse",
   "version": "0.0.1",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "ng": "ng",
-    "startApi": "node ../webServer/warehouseServer",
+    "startApi": "npm run start --prefix  ../../webServer",
+    "YYstartApi": "cd ../../webServer && npm run start",
     "startSite": "ng serve --proxy-config proxy.conf.json",
     "start": "npm-run-all --parallel startApi startSite",
     "build": "ng build",
