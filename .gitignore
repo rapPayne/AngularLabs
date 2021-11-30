@@ -1,3 +1,5 @@
+database.json
+
 .editorconfig
 typings
 **/app/**/*.js

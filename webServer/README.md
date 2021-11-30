@@ -11,11 +11,11 @@ npm install
 ```
 2. Freshen the data (optional)
 ```
-node --experimental-modules setOrderDates
+node setOrderDates.mjs
 ```
 3. Start the server
 ```
-npm run server
+npm run start
 ```
 
 
