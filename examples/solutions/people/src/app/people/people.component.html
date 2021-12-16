@@ -1,0 +1,7 @@
+<h1>All the cool people!</h1>
+<button (click)="toggleAddPerson()" class="btn btn-primary">Add a new person</button>
+<app-add-person (addNewPerson)="addPersonToList($event)" *ngIf="showAddPerson"></app-add-person>
+
+<section id="people">
+  <app-person *ngFor="let person of people" [person]="person"></app-person>
+</section>

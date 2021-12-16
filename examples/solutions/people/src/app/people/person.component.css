@@ -1,0 +1,10 @@
+.card {
+  width: 300px;
+  margin: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.selected {
+  background-color: pink;
+  box-shadow: 0 0 20px red;
+}

@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <h1>Add a new person</h1>
+  <p>{{ newPerson.name.first }} {{ newPerson.name.last }} {{ newPerson.location.city }}</p>
+  <form (ngSubmit)="addPerson(newPerson)">
+    <div>
+      <label for="first" class="form-class">First</label>
+      <input #firstname="ngModel" [(ngModel)]="newPerson.name.first" name="first" id="first" class="form-control"
+        required />
+      <p *ngIf="firstname.touched && firstname.invalid" class="alert alert-danger">We need a first name, please</p>
+    </div>
+    <div>
+      <label for="last" class="form-class">Last</label>
+      <input #lastname="ngModel" [(ngModel)]="newPerson.name.last" name="last" id="last" class="form-control"
+        required />
+      <p *ngIf="lastname.touched && lastname.invalid" class="alert alert-danger">We need a last name, please</p>
+    </div>
+    <div>
+      <label for="city" class="form-class">City</label>
+      <input #cityTR="ngModel" [(ngModel)]="newPerson.location.city" name="city" id="city" class="form-control" required
+        pattern="^([^0-9]*)$" />
+      <p *ngIf="cityTR.errors?.required" class="alert alert-danger">We need a city, please</p>
+      <p *ngIf="cityTR.errors?.pattern" class="alert alert-danger">City names don't have numbers in them</p>
+    </div>
+    <div>
+      <input type="submit" value="Add new person" class="btn btn-primary" />
+    </div>
+  </form>
+</div>

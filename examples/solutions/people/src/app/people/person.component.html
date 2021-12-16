@@ -1,0 +1,8 @@
+<section [ngClass]="{'card':true, 'selected':person.selected}" (click)="selectThisPerson(person)">
+  <img [src]="person.picture.large" class="card-img-top" [alt]="person.name.first">
+  <div class="card-body">
+    <h2 class="card-title">{{ person.name.first }} {{ person.name.last }}</h2>
+    <div>{{ person.location.city }}</div>
+    <button class="btn btn-sm btn-outline-danger">Delete</button>
+  </div>
+</section>
