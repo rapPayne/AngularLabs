@@ -17,9 +17,9 @@ export class ShipOrderComponent implements OnInit {
   constructor(private _route: ActivatedRoute) { }
 
   ngOnInit() {
-    const orderID = this._route.snapshot.params['orderID'];
+    const orderID = this._route.snapshot.params['id'];
     this.order = new Order();
-    this.order.orderID = orderID;
+    this.order.id = orderID;
 
     this.order.orderDate = new Date();
     this.order.shipVia = 1;

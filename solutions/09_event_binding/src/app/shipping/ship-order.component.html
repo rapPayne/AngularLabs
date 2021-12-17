@@ -14,7 +14,7 @@
 <section id="orderInfo">
   <ul class="list-group">
     <li class="list-group-item">
-      Order number: {{ order.orderID }}
+      Order number: {{ order.id }}
     </li>
     <li class="list-group-item">
       Order date: {{ order.orderDate }}
@@ -37,7 +37,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let line of order.lines">
-        <ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button></ng-template>
+        <ng-template #getLocationButton><button (click)="getBestLocation(line)" class="btn">Get best location</button>
+        </ng-template>
         <td><input type="checkbox" class="big-checkbox"></td>
         <td><span *ngIf="line.locationID ; else getLocationButton">{{ line.locationID }}</span></td>
         <td>{{ line.productID }}</td>
@@ -48,7 +49,8 @@
   </table>
 </section>
 <section id="markAsShipped">
-  <button (click)="markAsShipped(order)" class="btn btn-lg btn-primary" [disabled]="!isReadyToShip(order)">Mark as shipped</button>
+  <button (click)="markAsShipped(order)" class="btn btn-lg btn-primary" [disabled]="!isReadyToShip(order)">Mark as
+    shipped</button>
   <button (click)="markWithProblem(order)" class="btn btn-lg btn-danger">Problem</button>
 </section>
 <section id="shippingLabel">

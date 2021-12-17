@@ -40,12 +40,12 @@ export class ShipOrderComponent implements OnInit {
     }
 
     markAsShipped(order) {
-        this._ordersRepository.markAsShipped(order.orderID);
+        this._ordersRepository.markAsShipped(order.id);
         order.status = 1;
     }
 
     markWithProblem(order) {
-        this._ordersRepository.markAsTrouble(order.orderID);
+        this._ordersRepository.markAsTrouble(order.id);
         order.status = 2;
     }
 

@@ -8,7 +8,7 @@ import { ListOfOrdersComponent } from '../shipping/list-of-orders.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  orders=[];
+  orders = [];
   constructor() { }
 
   ngOnInit() {
@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
       {
         "customerID": 1056,
         "orderDate": new Date(),
-        "orderID": 10999,
+        "id": 10999,
         "shipAddress": "Mehrheimerstr. 369",
         "shipCity": "Köln",
         "shipCountry": "Germany",
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
       {
         "customerID": 1065,
         "orderDate": new Date(),
-        "orderID": 11000,
+        "id": 11000,
         "shipAddress": "2817 Milton Dr.",
         "shipCity": "Albuquerque",
         "shipCountry": "USA",
@@ -80,7 +80,7 @@ export class DashboardComponent implements OnInit {
       {
         "customerID": 1024,
         "orderDate": new Date(),
-        "orderID": 11001,
+        "id": 11001,
         "shipAddress": "Åkergatan 24",
         "shipCity": "Bräcke",
         "shipCountry": "Sweden",
@@ -117,7 +117,7 @@ export class DashboardComponent implements OnInit {
       {
         "customerID": 1071,
         "orderDate": new Date(),
-        "orderID": 11002,
+        "id": 11002,
         "shipAddress": "187 Suffolk Ln.",
         "shipCity": "Boise",
         "shipCountry": "USA",
@@ -151,7 +151,7 @@ export class DashboardComponent implements OnInit {
         ],
         "status": 1
       }
-    
+
     ]
   }
 

@@ -7,11 +7,11 @@ import { ReceiveProductComponent } from "./receiving/receive-product.component";
 import { InventoryComponent } from "./inventory/inventory.component";
 
 const routes = [
-  {path: "ship", component: OrdersToShipComponent},
-  {path: "ship/:orderID", component: ShipOrderComponent},
-  {path: "receive", component: ReceiveProductComponent},
-  {path: "inventory", component: InventoryComponent},
-  {path: "", component: DashboardComponent},
+  { path: "ship", component: OrdersToShipComponent },
+  { path: "ship/:", component: ShipOrderComponent },
+  { path: "receive", component: ReceiveProductComponent },
+  { path: "inventory", component: InventoryComponent },
+  { path: "", component: DashboardComponent },
 ];
 
 export const routing = RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' });

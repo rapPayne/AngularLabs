@@ -15,7 +15,7 @@ export class ShipOrderComponent implements OnInit {
 
   ngOnInit() {
     this.order = new Order();
-    this.order.orderID = 1;
+    this.order.id = 1;
     this.order.orderDate = new Date();
     this.order.shipVia = 1;
     this.order.shipping = 10;

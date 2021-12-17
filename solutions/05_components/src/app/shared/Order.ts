@@ -2,7 +2,7 @@ import { OrderLine } from "./OrderLine";
 import { Customer } from "./Customer";
 
 export class Order {
-  orderID: number;
+  id: number;
   customerID: string
   status: number;
   orderDate: Date;

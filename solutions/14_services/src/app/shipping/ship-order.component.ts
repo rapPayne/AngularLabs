@@ -46,7 +46,7 @@ export class ShipOrderComponent implements OnInit {
   markAsShipped(order) {
     order.status = 1;
     this._http
-      .patch(`/api/orders/${order.orderID}/MarkAsShipped/`, {})
+      .patch(`/api/orders/${order.id}/MarkAsShipped/`, {})
       .subscribe();
   }
 
@@ -54,7 +54,7 @@ export class ShipOrderComponent implements OnInit {
     order.status = 2;
     this.instructions = "Don't pick this order! It needs to be looked at by a supervisor.";
     this._http
-      .patch(`/api/orders/${order.orderID}/MarkAsProblem/`, {})
+      .patch(`/api/orders/${order.id}/MarkAsProblem/`, {})
       .subscribe();
   }
 }
