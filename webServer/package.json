@@ -5,7 +5,8 @@
   "description": "API data server for the Angular course labs",
   "scripts": {
     "oldServer": "nodemon warehouseServer.js",
-    "start": "json-server database.json"
+    "start": "json-server database.json",
+    "updateDates": "node ./setOrderDates.mjs"
   },
   "type": "module",
   "license": "GPL-3.0",
