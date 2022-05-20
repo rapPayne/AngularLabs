@@ -1,6 +1,7 @@
 database.json
 
 .editorconfig
+.angular
 typings
 **/app/**/*.js
 **/app/**/*.map
