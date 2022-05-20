@@ -15,7 +15,7 @@ import { Location } from '../shared/Location';
     styles: ['.big-checkbox {transform: scale(2)}']
 })
 export class ShipOrderComponent implements OnInit {
-    private order: Order = new Order();
+    order: Order = new Order();
 
     constructor(private _route: ActivatedRoute, private _http: HttpClient, private _ordersRepository: OrdersRepositoryService) {
         this._ordersRepository.getOrder(this._route.snapshot.params['orderID'], this.order);

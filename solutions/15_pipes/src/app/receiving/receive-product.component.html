@@ -11,10 +11,12 @@
   </ol>
   <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
 </div>
-<section id="trackingInfo" [ngClass]="{'bg-success':trackingControl.touched&&trackingControl.valid,'fg-success':trackingControl.touched&&trackingControl.valid,'bg-danger':trackingControl.touched&&trackingControl.invalid,'fg-danger':trackingControl.touched&&trackingControl.invalid}">
+<section id="trackingInfo"
+  [ngClass]="{'bg-success':trackingControl.touched&&trackingControl.valid,'fg-success':trackingControl.touched&&trackingControl.valid,'bg-danger':trackingControl.touched&&trackingControl.invalid,'fg-danger':trackingControl.touched&&trackingControl.invalid}">
   <div class="control-group">
     <label class="control-label" for="trackingNumber">Tracking number</label>
-    <input [(ngModel)]="trackingNumber" #trackingControl="ngModel" class="form-control" id="trackingNumber" required pattern="^\d[A-Z]\d{16}$|^\d{14,15}$|^9[2-4]\d{2}( ?\d{4}){4} ?\d{2}$">
+    <input [(ngModel)]="trackingNumber" #trackingControl="ngModel" class="form-control" id="trackingNumber" required
+      pattern="^\d[A-Z]\d{16}$|^\d{14,15}$|^9[2-4]\d{2}( ?\d{4}){4} ?\d{2}$">
   </div>
   <button (click)="saveTrackingNumber(trackingNumber)" class="btn btn-primary btn-large">Continue</button>
 </section>
@@ -39,7 +41,8 @@
       <input class="form-control" id="quantity" step="1" type="number" [(ngModel)]="quantity">
     </div>
     <div class="control-group">
-      <input (click)="receiveProduct(productID, quantity)" class="btn btn-primary" type="submit" value="Receive product" />
+      <input (click)="receiveProduct(productID, quantity)" class="btn btn-primary" type="submit"
+        value="Receive product" />
     </div>
   </section>
   <section id="orderContents">

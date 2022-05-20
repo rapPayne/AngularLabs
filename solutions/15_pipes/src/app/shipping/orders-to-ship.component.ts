@@ -8,13 +8,12 @@ import { OrdersRepositoryService } from '../services/orders-repository.service';
   styleUrls: ['./orders-to-ship.component.css']
 })
 export class OrdersToShipComponent implements OnInit {
-    private orders:Order[] = new Array<Order>();
+  orders: Order[] = new Array<Order>();
 
-    constructor(private _ordersRepository:OrdersRepositoryService)
-    {
-	this._ordersRepository.getOrdersReadyToShip().then(orders => this.orders = orders);
-    }
+  constructor(private _ordersRepository: OrdersRepositoryService) {
+    this._ordersRepository.getOrdersReadyToShip().then(orders => this.orders = orders);
+  }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 }

@@ -11,11 +11,12 @@ import { User } from '../shared/User';
 })
 export class ReceiveProductComponent implements OnInit {
 
-  private showForm: boolean;
+  showForm: boolean;
   private receivedProducts = [];
   private productID: number;
   private quantity: number;
-  private user: User;
+  user: User;
+  trackingNumber: String;
 
   constructor(private _http: HttpClient, private loginService: LoginService) { }
 
