@@ -1,6 +1,6 @@
 {
   "name": "warehouse_data_server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Rap Payne",
   "description": "API data server for the Angular course labs",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "repository": {},
   "engines": {
-    "node": "^14.0.0"
+    "node": ">=14.0.0"
   }
 }
