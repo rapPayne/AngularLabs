@@ -1,12 +1,10 @@
 <header>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-menu">&equiv;</button>
-        <a class="navbar-brand" href="#">Northwind WMS</a>
-      </div>
+      <a class="navbar-brand" href="#">Northwind WMS</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#header-menu">&equiv;</button>
       <div class="collapse navbar-collapse" id="header-menu">
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav">
           <li><a href="#">Ship Orders</a></li>
           <li><a href="#">Receive Product</a></li>
           <li><a href="#">Take Inventory</a></li>
@@ -14,7 +12,7 @@
       </div>
     </div>
   </nav>
-  <section class="well">
+  <section style="display: flex">
     <img src="/assets/images/ChefHatLogo.png" alt="Northwind Traders" />
     <h1>{{title}}</h1>
   </section>

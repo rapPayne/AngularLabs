@@ -1,6 +1,6 @@
 <h2>Receiving Products</h2>
 <div class="alert alert-success"> Order status </div>
-<div class="alert alert-info">
+<div class="alert alert-info m-5">
   <h3>Instructions</h3>
   <ol>
     <li>Scan or enter a tracking number.</li>
@@ -10,15 +10,16 @@
   </ol>
   <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
 </div>
-<section id="trackingInfo">
+<section id="trackingInfo" class="m-5">
   <div class="control-group">
     <label class="control-label" for="trackingNumber">Tracking number</label>
-    <input class="form-control" id="trackingNumber" required pattern="^\d[A-Z]\d{16}$|^\d{14,15}$|^9[2-4]\d{2}( ?\d{4}){4} ?\d{2}$" />
+    <input class="form-control" id="trackingNumber" required
+      pattern="^\d[A-Z]\d{16}$|^\d{14,15}$|^9[2-4]\d{2}( ?\d{4}){4} ?\d{2}$" />
   </div>
   <button class="btn btn-primary btn-large">Continue</button>
 </section>
 <div>
-  <section class="well" id="productInfo">
+  <section id="productInfo" class="m-5">
     <div class="control-group">
       <label class="control-label" for="productName">Product Name</label>
       <input class="form-control" id="productName">
@@ -41,7 +42,7 @@
       <input class="btn btn-primary" type="submit" value="Receive product" />
     </div>
   </section>
-  <section id="orderContents">
+  <section id="orderContents" class="m-5">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -84,7 +85,7 @@
       </tbody>
     </table>
   </section>
-  <section>
+  <section class="m-5">
     <button class="btn btn-lg">Finished receiving</button>
   </section>
 </div>
