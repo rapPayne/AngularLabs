@@ -13,8 +13,8 @@ By the time you're finished, you'll have an honest-to-goodness Node/Express web 
 
 ## Setup
 There are only two things needed to run the labs:
-1. node ^10 with npm
-1. The Angular cli (ng)
+1. Any [active or current](https://nodejs.org/en/about/releases/) version of Node.
+2. The Angular cli (ng)
 
 If you want some installation help including verification steps, go [here](setup/Angular%20Class%20Setup.pdf) .
 
@@ -36,11 +36,11 @@ We have products, locations, orders, and customers. They are stored in collectio
 ## Orders
 Have a status:
 
-Status | Meaning
--------|-----------
-0      | Ready to pick, pack, and ship
-1      | Shipped
-2      | Has problem(s) that a supervisor should fix
+| Status | Meaning                                     |
+| ------ | ------------------------------------------- |
+| 0      | Ready to pick, pack, and ship               |
+| 1      | Shipped                                     |
+| 2      | Has problem(s) that a supervisor should fix |
 
 ## Locations
 LocationID is a string with this format: AASHB where ...
