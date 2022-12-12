@@ -1,0 +1,15 @@
+<button #addRandom>Add a random number</button>
+<button (click)="startInterval()">Start</button>
+<button (click)="pauseInterval()">Pause</button>
+<button>Stop</button>
+<section class="numbers">
+  <div *ngFor="let number of numbers">
+    {{ number }}
+  </div>
+</section>
+<section class="messages">
+  <div *ngFor="let message of messages">
+    {{message}}
+  </div>
+</section>
+<a [routerLink]="'/generic'">Generic component</a>

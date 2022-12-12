@@ -1,0 +1,17 @@
+<p>pace-calculator works!</p>
+Select list with distance
+<label for="distance">Distance</label>
+
+<select id="distance" [(ngModel)]="distance">
+  <option>Pick one</option>
+  <option value="26.2">Marathon</option>
+  <option value="6.214">10k</option>
+  <option value="3.107">5k</option>
+</select>
+<label for="duration">Duration (hh:mm:ss)</label>
+<input [formControl]="duration" (change)="deleteMe()" id="duration" />
+<!-- <input [ngModel]="duration" (change)="deleteMe()" id="duration" /> -->
+<span *ngIf="duration.invalid" id="badDurationError">!</span>
+<button (click)="calculatePace()">Go</button>
+<!-- <p *ngIf="pace" id="pace">{{ pace }} min/mile</p> -->
+<p id="pace">{{ pace }}</p>

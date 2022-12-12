@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numbers div {
+  margin: 10px;
+}
