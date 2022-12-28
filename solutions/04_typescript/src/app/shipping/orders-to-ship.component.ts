@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from '../shared/Order';
 
 @Component({
   selector: 'nw-orders-to-ship',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders-to-ship.component.css']
 })
 export class OrdersToShipComponent implements OnInit {
-
+  orders: Order[] = new Array<Order>();
   constructor() { }
 
   ngOnInit() {

@@ -1,12 +1,11 @@
-import { Product } from './Product';
-import { Location } from './Location';
+import { Product } from "./Product";
 
-export class OrderLine {
-  quantity: number;
-  productID: number;
-  locationID: string;
-  price: number;
-  picked: boolean;
-  product: Product;
-  location: Location;
+export type OrderLine = {
+  quantity?: number
+  productID?: number
+  locationID?: string
+  price?: number
+  picked?: boolean
+  product?: Product
+  location?: Location
 }
