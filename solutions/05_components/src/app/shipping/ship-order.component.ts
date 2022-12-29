@@ -1,21 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../shared/Order';
-import { OrderLine } from '../shared/OrderLine';
-import { Product } from '../shared/Product';
 
 @Component({
   selector: 'nw-ship-order',
   templateUrl: './ship-order.component.html',
   styleUrls: ['./ship-order.component.css'],
-  styles: ['.big-checkbox { transform: scale(2) }', 'img {height:50px}']
+  styles: ['.bigCheckbox {transform: scale(2);}']
 })
 export class ShipOrderComponent implements OnInit {
-  public order: Order;
+  order: Order = new Order();
 
   constructor() { }
 
   ngOnInit() {
-    this.order = new Order();
     this.order.id = 1;
     this.order.orderDate = new Date();
     this.order.shipVia = 1;
@@ -28,24 +25,28 @@ export class ShipOrderComponent implements OnInit {
     this.order.shipPostalCode = "5T4N-L33";
     this.order.status = 0;
     this.order.lines = [];
-    const line1 = new OrderLine();
-    line1.locationID = "02B1C";
-    line1.price = 30.00;
-    line1.productID = 55;
-    line1.quantity = 2;
-    line1.product = new Product();
-    line1.product.name = "Oreos";
-    line1.product.imageUrl = "/assets/images/productImages/34.jpg";
-    const line2 = new OrderLine();
-    line2.locationID = "05A3A";
-    line2.price = 30.00;
-    line2.productID = 45;
-    line2.quantity = 7;
-    line2.product = new Product();
-    line2.product.name = "Peanuts";
-    line1.product.imageUrl = "/assets/images/productImages/67.jpg";
-    this.order.lines.push(line1);
-    this.order.lines.push(line2);
+    this.order.lines.push({});
+    this.order.lines[0].locationID = "02B1C";
+    this.order.lines[0].price = 30.00;
+    this.order.lines[0].productID = 55;
+    this.order.lines[0].quantity = 2;
+    this.order.lines[0].picked = true;
+    this.order.lines[0].product = {
+      id: 1,
+      name: "Oreos",
+      imageUrl: "/assets/images/productImages/34.jpg",
+    };
+    this.order.lines.push({});
+    this.order.lines[1].locationID = "05A3A";
+    this.order.lines[1].price = 30.00;
+    this.order.lines[1].productID = 45;
+    this.order.lines[1].quantity = 7;
+    this.order.lines[1].picked = false;
+    this.order.lines[1].product = {
+      id: 2,
+      name: "Peanuts",
+      imageUrl: "/assets/images/productImages/67.jpg",
+    }
   }
 
 }

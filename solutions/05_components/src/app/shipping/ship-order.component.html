@@ -1,5 +1,5 @@
 <div class="alert alert-success">
-  Order status: Ready to ship
+  Order status: {{ order.status }}
 </div>
 <div class="alert alert-info">
   <h3>Instructions</h3>
@@ -36,14 +36,14 @@
     </thead>
     <tbody>
       <tr>
-        <td><input type="checkbox" class="big-checkbox"></td>
+        <td><input type="checkbox" class="bigCheckbox"></td>
         <button class="btn">Get best location</button>
         <td>30</td>
         <td><img src="/assets/images/productImages/30.jpg"></td>
         <td>4</td>
       </tr>
       <tr>
-        <td><input type="checkbox" class="big-checkbox"></td>
+        <td><input type="checkbox" class="bigCheckbox"></td>
         <button class="btn">Get best location</button>
         <td>54</td>
         <td><img src="/assets/images/productImages/54.jpg"></td>
@@ -56,12 +56,47 @@
   <button class="btn btn-lg btn-primary">Mark as shipped</button>
   <button class="btn btn-lg btn-danger">Problem</button>
 </section>
+<h3>Shipping Label</h3>
 <section id="shippingLabel">
-  <h3>Shipping Label</h3>
-  <pre>
-      {{ order.shipName }}
-      {{ order.shipAddress }}
-      {{ order.shipCity }}, {{ order.shipRegion }} {{ order.shipPostalCode }}
-      {{ order.shipCountry }}
-      </pre>
+  <div class="topRow">
+    <section class="returnAddress">
+      <p>Northwest Traders</p>
+      <p>656329919223</p>
+      <p>Northwest Traders, LLC.</p>
+      <p>6717 LAKE SHORE DRIVE</p>
+      <p>ANYTOWN, AS 02334-2234</p>
+    </section>
+    <section class="weight">
+      <p>12 LBS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 OF 1</p>
+    </section>
+  </div>
+  <section class="toAddress">
+    <p class="shipToLabel">
+      SHIP TO:
+    </p>
+    <p>{{ order.shipName }}</p>
+    <p>656329919223</p>
+    <p>{{ order.shipName }}</p>
+    <p>{{ order.shipAddress }}</p>
+    <p class="cityRegion">{{ order.shipCity}}, {{ order.shipRegion }} {{ order.shipPostalCode }}</p>
+    <p>{{ order.shipCountry }}</p>
+  </section>
+  <section class="postalBarcode">
+    <div class="qrCode"><img src="/assets/images/qrCode.png" alt="qrCode" /></div>
+    <div class="regionZip">
+      <p>{{ order.shipRegion }} {{ order.shipPostalCode }}</p>
+      <img src="/assets/images/cityZipBarcode.png" alt="barcode" />
+    </div>
+  </section>
+  <section class="tracking">
+    <p>2-Day Priority</p>
+    <p>Tracking #: 9400 1057 3346 4567 2475 01</p>
+  </section>
+  <section class="trackingBarcode">
+    <img src="/assets/images/trackingBarcode.png" alt="barcode" />
+  </section>
+  <section class="notes">
+    <p>BILLING: P/P</p>
+    <p>ATTN DRIVER: SHIPPER RELEASE</p>
+  </section>
 </section>
