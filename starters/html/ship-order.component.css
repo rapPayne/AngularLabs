@@ -1,0 +1,112 @@
+#shippingLabel {
+  font-family: Courier, monospace;
+  text-transform: uppercase;
+  width: 600px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  transform: rotate(-90deg);
+  transform-origin: 300px 300px;
+
+}
+
+#shippingLabel p {
+  margin: 0;
+  line-height: 1em;
+}
+
+#shippingLabel .topRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#shippingLabel .topRow .weight {
+  font-size: 1.5em;
+}
+
+#shippingLabel .toAddress {
+  margin-top: 1.7em;
+  font-size: 1.4em;
+  margin-bottom: 3em;
+  padding: 0 10px;
+}
+
+#shippingLabel .toAddress p {
+  margin-left: 30px;
+}
+
+#shippingLabel .toAddress p.cityRegion {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#shippingLabel .toAddress .shipToLabel {
+  font-weight: bolder;
+  margin-left: 0;
+}
+
+#shippingLabel .postalBarcode {
+  border-top: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+#shippingLabel .postalBarcode .qrCode {
+  border: 3px solid black;
+  flex: 0 0 150px;
+}
+
+#shippingLabel .postalBarcode .qrCode img {
+  width: 150px;
+  height: auto;
+}
+
+#shippingLabel .postalBarcode .regionZip {
+  border: 3px solid black;
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+#shippingLabel .postalBarcode .regionZip p {
+  font-size: 3.5em;
+  font-weight: bolder;
+}
+
+#shippingLabel .postalBarcode .regionZip img {
+  width: 300px;
+  height: 70px;
+}
+
+#shippingLabel .tracking {
+  border-top: 8px solid black;
+  border-bottom: 3px solid black;
+  padding: 0 10px;
+}
+
+#shippingLabel .tracking p:first-child {
+  font-weight: normal;
+  font-size: 2.5em;
+}
+
+#shippingLabel .tracking p:last-child {
+  font-size: 1.3em;
+}
+
+#shippingLabel .trackingBarcode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 10px solid black;
+}
+
+#shippingLabel .trackingBarcode img {
+  width: 500px;
+  height: 150px;
+  padding: 10px;
+}
+
+#shippingLabel .notes {
+  padding: 0 10px;
+  min-height: 150px;
+}

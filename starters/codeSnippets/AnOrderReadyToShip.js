@@ -11,7 +11,6 @@ this.order.shipPostalCode = "5T4N-L33";
 this.order.status = 0;
 this.order.lines = [];
 this.order.lines.push({});
-this.order.lines[0].locationID = "02B1C";
 this.order.lines[0].price = 30.00;
 this.order.lines[0].productID = 55;
 this.order.lines[0].quantity = 2;
