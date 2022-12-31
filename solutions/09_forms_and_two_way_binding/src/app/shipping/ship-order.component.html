@@ -1,0 +1,108 @@
+<div [ngClass]="{'alert':true, 'alert-danger':order.status, 'alert-success':!order.status}">
+  Order status: {{ order.status }}
+</div>
+<section [ngSwitch]="order.status" class="alert alert-info">
+  <div *ngSwitchCase="0">
+    <h3>Instructions</h3>
+    <ol>
+      <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.</li>
+      <li>Pick the items and check the <i>Got it</i> box.</li>
+      <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+    </ol>
+    <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+  </div>
+  <div *ngSwitchCase="1">
+    This order has already been shipped. Do not pick it.
+  </div>
+  <div *ngSwitchCase="2">
+    This order has a problem with it. Bring it to the attention of a supervisor before picking it.
+  </div>
+</section>
+<section id="orderInfo">
+  <ul class="list-group">
+    <li class="list-group-item">
+      Order number: {{ order.id }}
+    </li>
+    <li class="list-group-item">
+      Order date: {{ order.orderDate }}
+    </li>
+    <li class="list-group-item">
+      Ship via: {{ order.shipVia }}
+    </li>
+  </ul>
+</section>
+
+<section id="orderLines">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Got it!</th>
+        <th>Location</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let line of order.lines">
+        <ng-template #getLocation>
+          <button (click)="getBestLocation(line)" class="btn">Get best location</button>
+        </ng-template>
+        <td><input [(ngModel)]="line.picked" type="checkbox" class="bigCheckbox"></td>
+        <td><span *ngIf="line.locationID ; else getLocation">{{ line.locationID }}</span></td>
+        <td>{{ line.productID }}</td>
+        <td><img src="/assets/images/productImages/{{line.productID}}.jpg"></td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<section id="markAsShipped">
+  <button [disabled]="!isReadyToShip(order)" (click)="markAsShipped(order)" class="btn btn-lg btn-primary">Mark as
+    shipped</button>
+  <button (click)="markAsProblem(order)" class="btn btn-lg btn-danger">Problem</button>
+</section>
+<h3>Shipping Label</h3>
+<section id="shippingLabel">
+  <div class="topRow">
+    <section class="returnAddress">
+      <p>Northwest Traders</p>
+      <p>656329919223</p>
+      <p>Northwest Traders, LLC.</p>
+      <p>6717 LAKE SHORE DRIVE</p>
+      <p>ANYTOWN, AS 02334-2234</p>
+    </section>
+    <section class="weight">
+      <p>12 LBS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 OF 1</p>
+    </section>
+  </div>
+  <section class="toAddress">
+    <p class="shipToLabel">
+      SHIP TO:
+    </p>
+    <p>{{ order.shipName }}</p>
+    <p>656329919223</p>
+    <p>{{ order.shipName }}</p>
+    <p>{{ order.shipAddress }}</p>
+    <p class="cityRegion">{{ order.shipCity}}, {{ order.shipRegion }} {{ order.shipPostalCode }}</p>
+    <p>{{ order.shipCountry }}</p>
+  </section>
+  <section class="postalBarcode">
+    <div class="qrCode"><img src="/assets/images/qrCode.png" alt="qrCode" /></div>
+    <div class="regionZip">
+      <p>{{ order.shipRegion }} {{ order.shipPostalCode }}</p>
+      <img src="/assets/images/cityZipBarcode.png" alt="barcode" />
+    </div>
+  </section>
+  <section class="tracking">
+    <p>2-Day Priority</p>
+    <p>Tracking #: 9400 1057 3346 4567 2475 01</p>
+  </section>
+  <section class="trackingBarcode">
+    <img src="/assets/images/trackingBarcode.png" alt="barcode" />
+  </section>
+  <section class="notes">
+    <p>BILLING: P/P</p>
+    <p>ATTN DRIVER: SHIPPER RELEASE</p>
+  </section>
+</section>

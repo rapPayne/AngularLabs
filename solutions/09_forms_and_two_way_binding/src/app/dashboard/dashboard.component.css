@@ -1,0 +1,10 @@
+.header-row {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.order-row {
+  border-top: 1px solid black;
+  padding: 10px 0;
+  cursor: pointer;
+}
