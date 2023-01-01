@@ -1,0 +1,21 @@
+<div class="container list-of-orders">
+  <div class="header-row row">
+    <div class="col-3">Order</div>
+    <div class="col-4">Date</div>
+    <div class="col-2">Products</div>
+    <div class="col-3">Total</div>
+  </div>
+
+  <div [routerLink]="'/ship/'+order.id" *ngFor="let order of orders" class="container order-row">
+    <div class="row row-1">
+      <div class="col-3">{{ order.id }}</div>
+      <div class="col-4">{{ order.orderDate }}</div>
+      <div class="col-2">{{ order.lines.length }}</div>
+      <div class="col-3">{{ getOrderTotal(order.lines) }}</div>
+    </div>
+    <div class="row row-2">
+      <div class="col-3"></div>
+      <div class="col-9">123 Main Street, Anytown, ST, 01234</div>
+    </div>
+  </div>
+</div> <!-- End of list-of-orders div -->
