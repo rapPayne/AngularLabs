@@ -4,20 +4,15 @@
   "author": "Rap Payne",
   "description": "API data server for the Angular course labs",
   "scripts": {
-    "oldServer": "nodemon warehouseServer.js",
     "start": "json-server database.json",
     "updateDates": "node ./setOrderDates.mjs"
   },
   "type": "module",
   "license": "GPL-3.0",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
     "json-server": "^0.16.1"
   },
-  "devDependencies": {
-    "nodemon": "^1.18.9"
-  },
+  "devDependencies": {},
   "repository": {},
   "engines": {
     "node": ">=14.0.0"
