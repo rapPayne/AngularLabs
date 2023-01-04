@@ -4,7 +4,7 @@
   <h3>Instructions</h3>
   <ol>
     <li>Scan or enter a tracking number.</li>
-    <li>Enter a product ID if you know it or begin entering a description and choose from options</li>
+    <li>Begin entering a description and choose from the options.</li>
     <li>Enter the number of items and check the <i>Got it</i> box.</li>
     <li>After you've picked, packed, and shipped your last item, click <i>Finished receiving</i></li>
   </ol>
@@ -24,21 +24,16 @@
   <section id="productInfo" class="m-5">
     <div class="control-group">
       <label class="control-label" for="productName">Product Name</label>
-      <input class="form-control" id="productName">
+      <input [(ngModel)]="productName" class="form-control" id="productName" />
     </div>
     <div class="list-group" id="productList">
-      <button class="list-group-item">A placeholder product</button>
-      <button class="list-group-item">Another placeholder product</button>
-      <button class="list-group-item">Yet another product</button>
-    </div>
-    <p>... OR ...</p>
-    <div class="control-group">
-      <label class="control-label" for="productID">Product ID</label>
-      <input [(ngModel)]="productID" class="form-control" id="productID">
+      <button (click)="currentProduct={name:productName}" class="list-group-item">
+        A placeholder product
+      </button>
     </div>
     <div class="control-group">
       <label class="control-label" for="quantity">Quantity Received</label>
-      <input [(ngModel)]="quantity" class="form-control" id="quantity" step="1" type="number">
+      <input [(ngModel)]="quantity" class="form-control" id="quantity" step="1" type="number" />
     </div>
     <div class="control-group">
       <button (click)="receiveProduct()" class="btn btn-primary">Receive product</button>
@@ -57,9 +52,9 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of receivedProducts">
-          <td><img alt="Product name here" src="assets/images/productImages/ProductID.jpg"></td>
+          <td><img [alt]="product.name" [src]="'assets/images/productImages/' + product.id + '.jpg'"></td>
           <td>{{ product.id }}</td>
-          <td>Product name here</td>
+          <td>{{ product.name }}</td>
           <td>{{ product.quantity }}</td>
           <td>04A4D</td>
         </tr>

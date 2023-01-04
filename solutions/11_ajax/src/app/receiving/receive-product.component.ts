@@ -10,8 +10,9 @@ export class ReceiveProductComponent implements OnInit {
   showForm: boolean = false;
   trackingNumber: string = "";
   receivedProducts: Array<Product & { quantity?: number }> = new Array();
-  productID?: number;
+  productName?: string;
   quantity?: number;
+  currentProduct?: Product;
 
   constructor() { }
 
@@ -23,8 +24,8 @@ export class ReceiveProductComponent implements OnInit {
   }
 
   receiveProduct() {
-    this.receivedProducts.push({ id: this.productID, quantity: this.quantity });
-    this.productID = undefined;
+    this.receivedProducts.push({ ...this.currentProduct, quantity: this.quantity });
+    this.productName = undefined;
     this.quantity = undefined;
   }
 
