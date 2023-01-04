@@ -27,15 +27,16 @@
       <input [(ngModel)]="productName" class="form-control" id="productName" />
     </div>
     <div class="list-group" id="productList">
-      <button (click)="currentProduct={name:productName}" class="list-group-item">
+      <button (click)="setCurrentProduct()" class="list-group-item">
         A placeholder product
       </button>
     </div>
-    <section class="currentProduct row align-items-center">
-      <img alt="Product name" src="assets/images/productImages/10.jpg" class="col-3 col-md-2 col-xl-1" />
+    <section *ngIf="currentProduct" class="currentProduct row align-items-center">
+      <img [alt]="currentProduct.name" [src]="'assets/images/productImages/'+currentProduct.id+'.jpg'"
+        class="col-3 col-md-2 col-xl-1" />
       <div class="col-9 col-md-10 col-xl-11">
-        <p>ID: id</p>
-        <p class="h4">Current product name</p>
+        <p>ID: {{ currentProduct.id }}</p>
+        <p class="h4">{{ currentProduct.name }}</p>
       </div>
     </section>
     <div class="control-group">

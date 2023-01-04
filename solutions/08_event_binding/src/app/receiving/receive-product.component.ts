@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../shared/Product';
 
 @Component({
   selector: 'nw-receive-product',
@@ -9,6 +10,7 @@ export class ReceiveProductComponent implements OnInit {
 
   showForm: boolean = false;
   trackingNumber: string = "";
+  currentProduct?: Product;
 
   constructor() { }
 
@@ -17,6 +19,10 @@ export class ReceiveProductComponent implements OnInit {
 
   saveTrackingNumber() {
     this.showForm = true;
+  }
+
+  setCurrentProduct(product: Product = { id: 0, name: "Fake Product" }) {
+    this.currentProduct = product;
   }
 
   receiveProduct() {

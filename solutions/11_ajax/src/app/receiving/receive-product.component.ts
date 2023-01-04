@@ -23,6 +23,10 @@ export class ReceiveProductComponent implements OnInit {
     this.showForm = true;
   }
 
+  setCurrentProduct(product: Product = { id: 0, name: "Fake Product" }) {
+    this.currentProduct = product;
+  }
+
   receiveProduct() {
     this.receivedProducts.push({ ...this.currentProduct, quantity: this.quantity });
     this.productName = undefined;
