@@ -1,0 +1,28 @@
+<header>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="'/'">Northwind WMS</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#header-menu">&equiv;</button>
+      <div class="collapse navbar-collapse" id="header-menu">
+        <ul class="navbar-nav">
+          <li><a class="nav-link" [routerLink]="'ship'">Ship Order</a></li>
+          <li><a class="nav-link" [routerLink]="'receive'">Receive Product</a></li>
+          <li><a class="nav-link" [routerLink]="'inventory'">Take Inventory</a></li>
+          <li><a class="nav-link" [routerLink]="'login'">Login</a></li>
+        </ul>
+      </div>
+      <ul *ngIf="authSvc.loggedIn" class="navbar-nav d-flex justify-content-end">
+        <a class="nav-link" [routerLink]="'account'">
+          {{ authSvc.user?.givenName }} {{ authSvc.user?.familyName }}
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <section style="display: flex">
+    <img src="/assets/images/ChefHatLogo.png" alt="Northwind Traders" />
+    <h1>{{title}}</h1>
+  </section>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
