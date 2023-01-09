@@ -27305,5 +27305,23 @@
       "price": 18,
       "imageUrl": "/assets/images/productImages/76.jpg"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "ndavolio",
+      "givenName": "Nancy",
+      "familyName": "Davolio",
+      "password": "pass",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "username": "afuller",
+      "givenName": "Andrew",
+      "familyName": "Fuller",
+      "password": "pass",
+      "isAdmin": false
+    }
   ]
 }

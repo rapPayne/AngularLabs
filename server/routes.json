@@ -5,5 +5,6 @@
   "/products/featured": "/products?featured=true",
   "/products\\?search=:searchString": "/products?name_like=:searchString",
   "/orders/:id/markAsShipped": "/orders/:id",
-  "/orders/:id/markAsProblem": "/orders/:id"
+  "/orders/:id/markAsProblem": "/orders/:id",
+  "/login/:username/:password": "/users?username=:username&password=:password"
 }
