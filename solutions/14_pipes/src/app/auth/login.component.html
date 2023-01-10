@@ -1,0 +1,15 @@
+<h1>Log in</h1>
+<div class="form-floating mb-3">
+  <input [(ngModel)]="username" class="form-control" id="username" autocomplete="off" />
+  <label for="username">Username</label>
+</div>
+<div class="form-floating">
+  <input type="password" [(ngModel)]="password" class="form-control" id="password" />
+  <label for="password">Password</label>
+</div>
+<div>
+  <button (click)="login()" class="btn btn-primary btn-lg">Login</button>
+</div>
+<div class="alert alert-success" *ngIf="message">
+  <p>{{ message }}</p>
+</div>

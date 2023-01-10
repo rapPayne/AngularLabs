@@ -1,0 +1,69 @@
+<div *ngIf="order$ | async ; let order">
+  <div [ngClass]="{'alert':true, 'alert-danger':order.status, 'alert-success':!order.status}">
+    Order status: {{ order.status}}
+  </div>
+  <section [ngSwitch]="order.status" class="alert alert-info">
+    <div *ngSwitchCase="0">
+      <h3>Instructions</h3>
+      <ol>
+        <li>Click a <i>Get best location</i> button and the system will tell you the best place to pick up your item.
+        </li>
+        <li>Pick the items and check the <i>Got it</i> box.</li>
+        <li>After you've picked, packed, and shipped your last item, click <i>Mark as shipped</i></li>
+      </ol>
+      <p> If there's a problem and you need a supervisor to look at it, hit the "Problem" button.</p>
+    </div>
+    <div *ngSwitchCase="1">
+      This order has already been shipped. Do not pick it.
+    </div>
+    <div *ngSwitchCase="2">
+      This order has a problem with it. Bring it to the attention of a supervisor before picking it.
+    </div>
+  </section>
+  <section id="orderInfo">
+    <ul class="list-group">
+      <li class="list-group-item">
+        Order number: {{ order.id }}
+      </li>
+      <li class="list-group-item">
+        Order date: {{ order.orderDate | date:"EEEE, MMMM dd, YYYY 'at' hh:mm a" }}
+      </li>
+      <li class="list-group-item">
+        Ship via: {{ order.shipVia | shipVia }}
+      </li>
+    </ul>
+  </section>
+
+  <section id="orderLines">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Got it!</th>
+          <th>Location</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let line of order.lines">
+          <ng-template #getLocation>
+            <button (click)="getBestLocation(line)" class="btn">Get best location</button>
+          </ng-template>
+          <td><input [(ngModel)]="line.picked" type="checkbox" class="bigCheckbox"></td>
+          <td><span *ngIf="line.locationID ; else getLocation">{{ line.locationID | location}}</span></td>
+          <td>{{ line.productID }}</td>
+          <td><img src="/assets/images/productImages/{{line.productID}}.jpg"></td>
+          <td>4</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="markAsShipped">
+    <button [disabled]="!isReadyToShip(order)" (click)="markAsShipped(order)" class="btn btn-lg btn-primary">Mark as
+      shipped</button>
+    <button (click)="markAsProblem(order)" class="btn btn-lg btn-danger">Problem</button>
+  </section>
+  <h3>Shipping Label</h3>
+  <nw-shipping-label [order]="order"></nw-shipping-label>
+</div>
