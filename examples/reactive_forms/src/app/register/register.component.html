@@ -1,0 +1,7 @@
+<p>register works!</p>
+
+<form [formGroup]="formGroup" (ngSubmit)="doSubmit()">
+  <input formControlName="firstName" />
+  <input type="submit" />
+</form>
+<p>First: {{formGroup.value.firstName }}</p>

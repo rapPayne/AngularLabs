@@ -28,10 +28,10 @@ Each lab can be run without copying any files. Just open a bash shell, cd to the
 npm install
 npm start
 ```
-If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder.
+If you want to use a solution from a prior lab as a starter, either copy the whole folder to a new one or simply begin editing the code in that folder. Just realize that you may need to change the path to the server folder in package.json.
 
 # About the warehouse data
-We have products, locations, orders, and customers. They are stored in collections (aka tables) in a mongo database.
+We have products, locations, orders, customers, and users. They are stored in collections (aka tables) in a flat file JSON database.
 
 ## Orders
 Have a status:
@@ -96,6 +96,15 @@ Only one product will be stored in a location so locationID is a primary key
 * `PATCH /api/locations/:id` - Update location at locationID *id*
 * `DELETE /api/locations/:id` - Delete location ID *id*
 * `GET /api/locations/forProduct/:id` - Get all locations where product *id* can be found.
+
+## Users
+* `GET /api/users` - All users
+* `POST /api/users` - Creaes a new user
+* `GET /api/users/:id` - Read user for userID *id*
+* `PUT /api/users/:id` - Replace user at userID *id*
+* `PATCH /api/users/:id` - Update user at userID *id*
+* `DELETE /api/users/:id` - Delete user ID *id*
+* `GET /api/login/:username/:password` - Get the user for that username and password combination.
 
 # Instructor Notes
 
