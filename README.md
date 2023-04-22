@@ -127,19 +127,17 @@ Things that may be helpful to instructors teaching this course.
 
 * TypeScript Lab
 * Components Intro
-* Components Intro Lab
 * Lunch
-* Property Binding
-* Property Binding Lab
+* Components Intro Lab
 * Built-in Directives
+* Built-in Directives Lab
 
 ### Wednesday
 
-* Built-in Directives Lab
 * Routing
 * Routing Lab
-* Lunch
 * Event Binding
+* Lunch
 * Event Binding Lab
 * Forms and 2-way Binding
 * Forms and 2-way Binding Lab
