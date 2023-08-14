@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/about']">About</a>
+    <a [routerLink]="['/contact']">Contact</a>
+    <a *ngIf="! this.authSvc.loggedIn()" [routerLink]="['/login']">Login</a>
+    <a *ngIf="this.authSvc.loggedIn()" [routerLink]="['/logout']">Logout</a>
+    <a [routerLink]="['/my-secrets']">My secrets</a>
+    <a [routerLink]="['/all-secrets']">Everyone's secrets</a>
+    <span *ngIf="authSvc.user()">Hello {{authSvc.user()?.first}}</span>
+  </nav>
+</header>
+<main>
+  <router-outlet />
+</main>
+<footer>
+  The end
+</footer>
