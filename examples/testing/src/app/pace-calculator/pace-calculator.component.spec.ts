@@ -1,9 +1,7 @@
 import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppModule } from '../app.module';
 import { PaceCalculatorComponent } from './pace-calculator.component';
-import { Input } from '@angular/core';
 import { PaceService } from './pace.service';
 
 describe('PaceCalculatorComponent', () => {
@@ -120,11 +118,16 @@ describe('PaceCalculatorComponent', () => {
     durationInput.dispatchEvent(new Event('input'));
     distanceSelect.dispatchEvent(new Event('input'));
     fixture.detectChanges()
+
     //Act
+    // Just another way to trigger a click
+    // let debugButton = fixture.debugElement.query(By.css('button'))
+    // debugButton.triggerEventHandler('click')
     button.dispatchEvent(new Event('click'));
     fixture.detectChanges()
-    //Assert
     const pace = +paceOutput.textContent;
+
+    //Assert
     expect(pace).toBeCloseTo(9.656, 2)
     expect(calcPaceSpy).toHaveBeenCalledTimes(1)
     //RAP: Why doesn't the following work?

@@ -1,0 +1,32 @@
+<h1>Custom directives demo</h1>
+
+<p rotatable>Imagine a CMS (Content management system) where the contents of the page is read from a server. This means
+  that every
+  page could be completely dynamic. It also means that it should be maintained by an administrator.</p>
+
+<p>To make that happen, we're going to allow a user to double-click on any elment that is marked with
+  <span>*content-editable</span> and watch it become, well, editable.
+</p>
+
+<h2 rotatable>Some things to mess with</h2>
+<ul>
+  <li>Lorem.</li>
+  <li highlight-hover>Vel, eos.</li>
+  <li>Incidunt, temporibus ad!</li>
+  <li>Quos doloremque sunt consequatur.</li>
+  <li>Aliquam amet corrupti fuga quo.</li>
+</ul>
+
+<section class="images">
+  <img rotatable src="https://placekitten.com/200/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/201/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/202/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/203/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/204/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/205/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/206/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/207/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/208/200" alt="Awww... a cute kitten" />
+  <img rotatable src="https://placekitten.com/209/200" alt="Awww... a cute kitten" />
+</section>
+<article [tableize]="listOfPeople">Old content</article>
